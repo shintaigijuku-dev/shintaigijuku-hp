@@ -1,0 +1,345 @@
+
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心体義塾 | 東洋医学×最新科学で身体を解き明かす</title>
+    <meta name="description" content="心体義塾公式サイト。無意識を整え、パフォーマンスを覚醒させる心と体の調律法「ZAT（ZEROSHIKI ATTITUDE TUNING）」を提唱。東洋医学の身体観と最新のポリヴェーガル理論を融合させた、スポーツ障害ケアやリコンディショニングの教育機関です。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        .font-serif {
+            font-family: 'Shippori Mincho', serif;
+        }
+
+        /* ヒーローセクションの背景画像をJPEGファイルに変更 */
+        .hero-bg {
+            /* ここに新しいJPEGファイルのパスを指定します。例: 'hero-image.jpg' */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('hero-image.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- ナビゲーション -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-serif font-bold tracking-widest text-gray-900">
+                <a href="#">心体義塾</a>
+            </h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-sm font-medium hover:text-blue-700 transition">心体義塾について</a>
+                <a href="#workshop" class="text-sm font-medium hover:text-blue-700 transition">最新ワークショップ</a>
+                <a href="#profile" class="text-sm font-medium hover:text-blue-700 transition">塾長紹介</a>
+                <a href="#contact" class="px-5 py-2 bg-blue-900 text-white text-sm rounded-full hover:bg-blue-800 transition">お問い合わせ</a>
+            </nav>
+            <!-- モバイルメニューボタン -->
+            <button class="md:hidden text-gray-700" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <!-- モバイルメニュー -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#about" class="block px-4 py-3 hover:bg-gray-50">心体義塾について</a>
+            <a href="#workshop" class="block px-4 py-3 hover:bg-gray-50">最新ワークショップ</a>
+            <a href="#profile" class="block px-4 py-3 hover:bg-gray-50">塾長紹介</a>
+            <a href="#contact" class="block px-4 py-3 hover:bg-gray-50 text-blue-800 font-bold">お問い合わせ</a>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="hero-bg h-screen flex items-center justify-center text-white relative">
+        <div class="text-center px-4 max-w-4xl fade-up">
+            <p class="text-lg md:text-xl tracking-[0.2em] mb-4 font-light">SHINTAI GIJUKU</p>
+            <h2 class="text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight">
+                無意識を整え<br>
+                パフォーマンスを覚醒させる
+            </h2>
+            <p class="text-gray-200 mb-10 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mt-8">
+                東洋医学の深遠な知恵と、最新の神経生理学（ポリヴェーガル理論）の融合。<br class="hidden md:block">
+                心体義塾は、人間が本来持っている治癒システムを再起動させる<br class="hidden md:block">
+                「ZAT（ZEROSHIKI ATTITUDE TUNING / ゼロ式姿勢調律法）」<br class="hidden md:block">
+                を提唱する教育機関です。
+            </p>
+            <a href="#workshop" class="inline-block bg-blue-800 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-medium transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                最新のワークショップを見る
+            </a>
+        </div>
+        <div class="absolute bottom-10 w-full flex justify-center animate-bounce">
+            <i data-lucide="chevron-down" class="w-8 h-8 text-white/70"></i>
+        </div>
+    </section>
+
+    <!-- 最新ワークショップ情報 -->
+    <section id="workshop" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12 fade-up">
+                <span class="text-blue-800 font-bold tracking-widest text-sm uppercase">Latest Workshop</span>
+                <h3 class="text-3xl font-serif font-bold mt-2">近日開催のワークショップ</h3>
+                <div class="w-12 h-1 bg-blue-800 mx-auto mt-4"></div>
+            </div>
+
+            <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-lg fade-up">
+                <div class="md:flex">
+                    <div class="md:w-2/5 bg-blue-900 text-white p-8 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20 z-0"></div>
+                        <div class="relative z-10">
+                            <span class="inline-block bg-white/20 px-3 py-1 rounded text-xs tracking-wider mb-4">受付中</span>
+                            <div class="text-5xl font-serif font-bold mb-2">2.11</div>
+                            <div class="text-xl mb-4">Wed / Holiday</div>
+                            <p class="text-sm opacity-90">横浜・関内</p>
+                            <p class="text-sm opacity-90">14:30 - 16:30</p>
+                        </div>
+                    </div>
+                    <div class="md:w-3/5 p-8 md:p-10">
+                        <h4 class="text-xl md:text-2xl font-bold mb-4 text-gray-900 leading-snug">
+                            繰り返す痛みの「根本」にアプローチする。<br>
+                            スポーツ障害・傷害ケアとリコンディショニング
+                        </h4>
+                        <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                            患部の治療だけでは改善しない痛みや不調。その鍵は「自律神経」と「呼吸」にあります。東洋医学の身体観と最新のポリヴェーガル理論を融合させ、身体が本来持つ治癒システムを再起動させる、心体義塾独自のケア理論を伝授します。
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <!-- ワークショップ申込フォーム -->
+                            <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="flex-1 bg-blue-800 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-bold transition flex items-center justify-center gap-2">
+                                <i data-lucide="edit-3" class="w-4 h-4"></i>
+                                今すぐ申し込む
+                            </a>
+                            <!-- チラシ画像へのリンク（flyer.jpg） -->
+                            <a href="flyer.jpg" target="_blank" class="flex-1 border border-gray-300 hover:bg-gray-50 text-gray-700 text-center py-3 rounded-lg font-bold transition flex items-center justify-center gap-2">
+                                <i data-lucide="image" class="w-4 h-4"></i>
+                                詳細を見る（チラシ画像）
+                            </a>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-4 text-center">※定員（20名）になり次第締め切りとなります</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 心体義塾について -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-up order-2 md:order-1">
+                    <!-- 瞑想の画像をJPEGファイルに変更 -->
+                    <img src="meditation-image.jpg" alt="Meditation and Breathing" class="rounded-lg shadow-xl w-full object-cover h-[500px]">
+                </div>
+                <div class="fade-up order-1 md:order-2">
+                    <span class="text-blue-800 font-bold tracking-widest text-sm uppercase">Philosophy</span>
+                    <h3 class="text-3xl font-serif font-bold mt-2 mb-6">東洋の叡智を、<br>現代の「呼吸」で紐解く。</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        心体義塾は、武道教育を中心に心身の鍛錬と人間形成を目指す教育機関です。
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        東洋医学において重要な概念である「気」。それは目に見えず、感覚的で捉えにくいものです。
+                        心体義塾では、この「気」を現代人が誰でも実践できる「呼吸」という動作に変換し、科学的な視点（ポリヴェーガル理論）から再構築しました。
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        呼吸を通じて自律神経を調律（チューニング）し、人間が本来持っているポテンシャルを最大限に引き出す。
+                        それが私たちが提唱するメソッド「ZAT」です。
+                    </p>
+                    <div class="bg-white p-6 rounded-lg border-l-4 border-blue-800 shadow-sm">
+                        <h4 class="font-bold text-blue-900 mb-2">ZAT（ZEROSHIKI ATTITUDE TUNING）</h4>
+                        <p class="text-sm text-gray-600">
+                            通称「ゼロ式姿勢調律法」。<br>
+                            意識的なコントロール（Awareness）を超えた、無意識レベルでの身体調整を行う独自のメソッドです。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 塾長プロフィール -->
+    <section id="profile" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12 fade-up">
+                <span class="text-blue-800 font-bold tracking-widest text-sm uppercase">Founder</span>
+                <h3 class="text-3xl font-serif font-bold mt-2">塾長紹介</h3>
+                <div class="w-12 h-1 bg-blue-800 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-10 fade-up">
+                <div class="md:w-1/3 text-center">
+                    <!-- プレースホルダー画像: 実際は内田塾長の写真を設定 -->
+                    <div class="w-48 h-48 md:w-64 md:h-64 mx-auto bg-gray-200 rounded-full overflow-hidden border-4 border-gray-100 shadow-lg relative">
+                        <!-- 塾長の画像をJPEGファイルに変更 -->
+                        <img src="founder-image.jpg" alt="内田真弘" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black/10">
+                            <!-- 実際の運用ではここに塾長の写真を入れてください -->
+                        </div>
+                    </div>
+                    <h4 class="text-xl font-bold mt-6 mb-1">内田 真弘</h4>
+                    <p class="text-sm text-gray-500">Masahiro Uchida</p>
+                    <p class="text-xs text-blue-800 font-bold mt-2">心体義塾 塾長 / ZAT創始者</p>
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        武道の精神と身体操作をベースに、人間が本来持っている潜在能力を引き出す指導を行う。
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        東洋医学で重要視される「気」の概念を、より多くの人に論理的に理解してもらうため、誰もが行う「呼吸」に着目。自律神経理論（ポリヴェーガル理論）を基礎とした独自の調整法「ZAT（ZEROSHIKI ATTITUDE TUNING / ゼロ式姿勢調律法）」を確立した。
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        「心と体は一つである」という心身一如の理念のもと、慢性痛の改善からアスリートのパフォーマンス向上まで、呼吸と姿勢を通じた根本的な身体改革を指導している。著書に『内田式風船エクササイズ』（日貿出版社）。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 活動内容 -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-blue-400 font-bold tracking-widest text-sm uppercase">Activities</span>
+                <h3 class="text-3xl font-serif font-bold mt-2">活動内容</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition fade-up">
+                    <div class="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center mb-6 text-blue-400">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">ワークショップ・講習会</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        一般の方から専門家までを対象に、ZATメソッドや呼吸法、身体操作を学ぶ定期的なワークショップを開催しています。
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition fade-up" style="transition-delay: 100ms;">
+                    <div class="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center mb-6 text-blue-400">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">指導者養成</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        トレーナー、セラピスト、医療従事者を対象に、現場で活かせる心身調整技術の指導と認定を行っています。
+                    </p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition fade-up" style="transition-delay: 200ms;">
+                    <div class="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center mb-6 text-blue-400">
+                        <i data-lucide="activity" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">アスリートサポート</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        プロ・アマ問わず、競技パフォーマンスの向上や怪我からの復帰（リコンディショニング）をサポートします。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section id="contact" class="py-20 bg-blue-50">
+        <div class="container mx-auto px-4 max-w-4xl text-center fade-up">
+            <h3 class="text-3xl font-serif font-bold mb-6">お問い合わせ</h3>
+            <p class="text-gray-600 mb-8">
+                ワークショップへの申し込み、取材依頼、その他ご質問は<br>
+                以下のフォームよりお気軽にお問い合わせください。
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <!-- 総合お問い合わせフォーム -->
+                <a href="https://forms.gle/RGRiv7qjGAGChmYe7" target="_blank" class="w-full md:w-auto bg-blue-900 hover:bg-blue-800 text-white px-8 py-4 rounded-full font-bold shadow-lg transition flex items-center justify-center gap-2">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    お問い合わせフォームへ
+                </a>
+                <a href="https://www.instagram.com/sintai_gijuku/" target="_blank" class="w-full md:w-auto bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 px-6 py-4 rounded-full font-bold shadow-sm transition flex items-center justify-center gap-2">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                    Instagram
+                </a>
+                <a href="https://www.youtube.com/@%E5%BF%83%E4%BD%93%E7%BE%A9%E5%A1%BE-%E5%91%BC%E5%90%B8%E9%81%93" target="_blank" class="w-full md:w-auto bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 px-6 py-4 rounded-full font-bold shadow-sm transition flex items-center justify-center gap-2">
+                    <i data-lucide="youtube" class="w-5 h-5 text-red-600"></i>
+                    YouTube
+                </a>
+            </div>
+            <!-- メールアドレス追加 -->
+            <p class="mt-8 text-gray-600 text-sm">
+                メールでのご連絡はこちら：<br class="md:hidden">
+                <a href="mailto:shintaigijuku@gmail.com" class="text-blue-800 font-bold hover:underline text-base">shintaigijuku@gmail.com</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-serif font-bold text-white mb-4">心体義塾</h2>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="hover:text-white transition">Home</a>
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#workshop" class="hover:text-white transition">Workshop</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
+            <p class="text-xs">&copy; 2025 Shintai Gijuku. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lucideアイコンの初期化
+        lucide.createIcons();
+
+        // スクロール時のフェードインアニメーション
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // 一度表示されたら監視を終了
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(element => {
+            observer.observe(element);
+        });
+
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+
+                // hrefが "#" だけの場合はトップに戻る処理にする（エラー回避）
+                if (href === '#') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    return;
+                }
+
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                // モバイルメニューが開いていたら閉じる
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
