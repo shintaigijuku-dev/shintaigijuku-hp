@@ -1,10 +1,90 @@
-
+!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>心体義塾 | 東洋医学×最新科学で身体を解き明かす</title>
-    <meta name="description" content="心体義塾公式サイト。無意識を整え、パフォーマンスを覚醒させる心と体の調律法「ZAT（ZEROSHIKI ATTITUDE TUNING）」を提唱。東洋医学の身体観と最新のポリヴェーガル理論を融合させた、スポーツ障害ケアやリコンディショニングの教育機関です。">
+    <meta name="description" content="心体義塾公式サイト。無意識を整え、パフォーマンスを覚醒させる心と体の調律法「ZAT（ZEROSHIKI ATTITUDE TUNING）」を提唱。東洋医学の身体観と最新のポリヴェーガル理論（自律神経）を融合させた、スポーツ障害ケア、リコンディショニング、呼吸法指導などを行う教育機関です。">
+    <meta name="keywords" content="心体義塾,ZAT,ポリヴェーガル理論,東洋医学,スポーツ障害,リコンディショニング,呼吸法,内田真弘,横浜">
+    
+    <!-- OGP設定 (SNSシェア時の表示) -->
+    <meta property="og:title" content="心体義塾 | 東洋医学×最新科学で身体を解き明かす">
+    <meta property="og:description" content="無意識を整え、パフォーマンスを覚醒させる。心と体の調律法「ZAT」公式サイト。2/11ワークショップ受付中。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shintaigijuku-hp.github.io/"> <!-- ※公開後に実際のURLに変更してください -->
+    <meta property="og:image" content="hero-image.jpg"> <!-- シェア時に表示される画像 -->
+    <meta property="og:site_name" content="心体義塾">
+    <meta property="og:locale" content="ja_JP">
+
+    <!-- Twitter Card設定 -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="心体義塾 | 東洋医学×最新科学で身体を解き明かす">
+    <meta name="twitter:description" content="無意識を整え、パフォーマンスを覚醒させる。心と体の調律法「ZAT」公式サイト。">
+    <meta name="twitter:image" content="hero-image.jpg">
+
+    <!-- 構造化データ (Google検索エンジン向け) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "心体義塾",
+      "url": "https://shintaigijuku-hp.github.io/",
+      "logo": "hero-image.jpg",
+      "founder": {
+        "@type": "Person",
+        "name": "内田 真弘"
+      },
+      "description": "東洋医学の身体観と最新のポリヴェーガル理論を融合させた、心身調律メソッド「ZAT」を提唱する教育機関。",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "神奈川県",
+        "addressLocality": "横浜市"
+      },
+      "sameAs": [
+        "https://www.instagram.com/sintai_gijuku/",
+        "https://www.youtube.com/@%E5%BF%83%E4%BD%93%E7%BE%A9%E5%A1%BE-%E5%91%BC%E5%90%B8%E9%81%93"
+      ]
+    }
+    </script>
+
+    <!-- イベント構造化データ (2/11ワークショップ) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "スポーツ障害・傷害ケアとリコンディショニングの理論と実践",
+      "startDate": "2026-02-11T14:30",
+      "endDate": "2026-02-11T16:30",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "ミズグチダンススクール",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "蓬莱町1-2-8 勝幸ビル 3F",
+          "addressLocality": "横浜市中区",
+          "addressRegion": "神奈川県",
+          "postalCode": "231-0048",
+          "addressCountry": "JP"
+        }
+      },
+      "image": [
+        "flyer.jpg"
+      ],
+      "description": "東洋医学×ポリヴェーガル理論で紐解く、回復への新常識。心体義塾独自のケアとリコンディショニング理論を伝授します。",
+      "performer": {
+        "@type": "Person",
+        "name": "内田 真弘"
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "心体義塾",
+        "url": "https://shintaigijuku-hp.github.io/"
+      }
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -142,8 +222,8 @@
         <div class="container mx-auto px-4 max-w-6xl">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="fade-up order-2 md:order-1">
-                    <!-- 瞑想の画像をJPEGファイルに変更 -->
-                    <img src="meditation-image.jpg" alt="Meditation and Breathing" class="rounded-lg shadow-xl w-full object-cover h-[500px]">
+                    <!-- 瞑想の画像をJPEGファイルに変更、alt属性を日本語化 -->
+                    <img src="meditation-image.jpg" alt="呼吸法と瞑想を行う様子" class="rounded-lg shadow-xl w-full object-cover h-[500px]">
                 </div>
                 <div class="fade-up order-1 md:order-2">
                     <span class="text-blue-800 font-bold tracking-widest text-sm uppercase">Philosophy</span>
@@ -185,7 +265,7 @@
                     <!-- プレースホルダー画像: 実際は内田塾長の写真を設定 -->
                     <div class="w-48 h-48 md:w-64 md:h-64 mx-auto bg-gray-200 rounded-full overflow-hidden border-4 border-gray-100 shadow-lg relative">
                         <!-- 塾長の画像をJPEGファイルに変更 -->
-                        <img src="founder-image.jpg" alt="内田真弘" class="w-full h-full object-cover">
+                        <img src="founder-image.jpg" alt="心体義塾 塾長 内田真弘" class="w-full h-full object-cover">
                         <div class="absolute inset-0 flex items-center justify-center bg-black/10">
                             <!-- 実際の運用ではここに塾長の写真を入れてください -->
                         </div>
