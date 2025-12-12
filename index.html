@@ -1,4 +1,4 @@
-!DOCTYPE html>
+
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -221,7 +221,7 @@
     <!-- 心体義塾について -->
     <section id="about" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4 max-w-6xl">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
                 <div class="fade-up order-2 md:order-1">
                     <!-- 瞑想の画像をJPEGファイルに変更、alt属性を日本語化 -->
                     <img src="meditation-image.jpg" alt="呼吸法と瞑想を行う様子" class="rounded-lg shadow-xl w-full object-cover h-[500px]">
@@ -249,6 +249,44 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 新規追加：何故ZATメソッドなのか？ -->
+            <div class="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100 fade-up">
+                <div class="text-center mb-10">
+                    <h3 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">何故、ZATメソッドなのか？</h3>
+                    <div class="w-16 h-1 bg-blue-800 mx-auto mt-4"></div>
+                </div>
+                <div class="prose max-w-none text-gray-700 leading-relaxed space-y-6">
+                    <p>
+                        私たちの「生きる」という生命活動は、ホメオスタシス（恒常性維持）の働きから、全身の細胞による新陳代謝によりリモデリングを行うことで、<strong>エントロピー増大に逆らい続けること</strong>です。
+                    </p>
+                    <p>
+                        しかし、生命活動における物理現象は必ずエントロピー（乱雑さ）が増大する方に進み、肉体は壊れたり、失われることになります。
+                        健康に生きるためには、このエントロピーをいかにうまく排出（デトックス）できるか？に依拠しています。
+                    </p>
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-400 my-6">
+                        <p class="mb-0 text-sm md:text-base">
+                            <strong>ストレスが溜まるとは…</strong><br>
+                            自律神経における自己防衛反応がうまく処理できずにエントロピーが増大することにより、精神的、心因的、肉体的に障害が起こることでもあります。
+                        </p>
+                    </div>
+                    <p>
+                        病気の症状とは、ホメオスタシスにより生命維持の為に調整された結果として心身、精神に現れたものと言えます。
+                        それがエントロピーのコントロールが出来ていれば「治る病気」として現れますが、コントロールが不適切ならば「治らない病気」として現れるのです。
+                    </p>
+                    <p>
+                        食事、生活習慣、からだの使い方、呼吸、外部環境、ストレス反応など、日常生活で当たり前のことがホメオスタシスに大きな影響を与えています。
+                        そんな私達のホメオスタシス（恒常性維持）に大きく影響するものとして、<strong>「呼吸」と「姿勢」</strong>があります。
+                    </p>
+                    <p class="font-bold text-center text-lg md:text-xl text-blue-900 py-4">
+                        ホメオスタシスとは維持する力であり、<br>自然治癒力とは回復する力であります。
+                    </p>
+                    <p>
+                        この2つの力を最適に機能させる為に、呼吸と姿勢が重要となるのです。
+                        だからこそ、ZATメソッドは呼吸と姿勢にフォーカスをしているのです。
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -261,21 +299,45 @@
                 <div class="w-12 h-1 bg-blue-800 mx-auto mt-4"></div>
             </div>
             
-            <div class="flex flex-col md:flex-row items-center gap-10 fade-up">
-                <div class="md:w-1/3 text-center">
+            <div class="flex flex-col md:flex-row items-start gap-10 fade-up">
+                <div class="md:w-1/3 w-full text-center md:sticky md:top-24">
                     <!-- プレースホルダー画像: 実際は内田塾長の写真を設定 -->
-                    <div class="w-48 h-48 md:w-64 md:h-64 mx-auto bg-gray-200 rounded-full overflow-hidden border-4 border-gray-100 shadow-lg relative">
+                    <div class="w-48 h-48 md:w-64 md:h-64 mx-auto bg-gray-200 rounded-full overflow-hidden border-4 border-gray-100 shadow-lg relative mb-6">
                         <!-- 塾長の画像をJPEGファイルに変更 -->
                         <img src="founder-image.jpg" alt="心体義塾 塾長 内田真弘" class="w-full h-full object-cover">
                         <div class="absolute inset-0 flex items-center justify-center bg-black/10">
                             <!-- 実際の運用ではここに塾長の写真を入れてください -->
                         </div>
                     </div>
-                    <h4 class="text-xl font-bold mt-6 mb-1">内田 真弘</h4>
+                    <h4 class="text-xl font-bold mb-1">内田 真弘</h4>
                     <p class="text-sm text-gray-500">Masahiro Uchida</p>
                     <p class="text-xs text-blue-800 font-bold mt-2">心体義塾 塾長 / ZAT創始者</p>
                 </div>
                 <div class="md:w-2/3">
+                    <!-- 追加：資格・経歴リスト -->
+                    <ul class="text-sm text-gray-700 space-y-2 mb-6 bg-gray-50 p-5 rounded-lg">
+                        <li class="flex gap-2">
+                            <span class="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span>
+                            <span>神奈川衛生学園専門学校 東洋医療総合学科 教員</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span>
+                            <span>筑波大学 理療科教員養成施設 非常勤講師</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span>
+                            <span>横浜国際プールはりきゅうマッサージ室 室長</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span>
+                            <span>ドイツ ＶＰＴアカデミー認定 スポーツフィジオセラピスト</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span>
+                            <span>PNF（固有受容体性 神経筋 促通法）資格保持者</span>
+                        </li>
+                    </ul>
+
                     <p class="text-gray-600 leading-relaxed mb-4">
                         武道の精神と身体操作をベースに、人間が本来持っている潜在能力を引き出す指導を行う。
                     </p>
