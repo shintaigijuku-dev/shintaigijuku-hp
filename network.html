@@ -24,6 +24,17 @@
         .font-serif { font-family: 'Shippori Mincho', serif; }
         .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
+        
+        /* アコーディオンのアニメーション */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.open {
+            max-height: 1000px; /* 十分な高さを指定 */
+            transition: max-height 0.5s ease-in;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
@@ -72,130 +83,219 @@
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
+            <!-- グリッドレイアウト（2列） -->
+            <div class="grid md:grid-cols-2 gap-6">
                 
-                <!-- 横浜国際プールはりきゅうマッサージ室 -->
-                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition fade-up">
-                    <div class="p-8">
-                        <div class="flex items-start justify-between mb-4">
+                <!-- 1. 横浜国際プールはりきゅうマッサージ室 -->
+                <div class="bg-white rounded-xl shadow border border-gray-200 overflow-hidden hover:shadow-md transition fade-up flex flex-col">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
                             <div>
                                 <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded font-bold">神奈川・横浜</span>
-                                <h3 class="text-2xl font-bold mt-2 text-gray-900">横浜国際プール<br>はりきゅうマッサージ室</h3>
+                                <h3 class="text-xl font-bold mt-2 text-gray-900">横浜国際プール<br>はりきゅうマッサージ室</h3>
                                 <p class="text-sm text-gray-500 mt-1">室長：内田 真弘</p>
                             </div>
-                            <div class="bg-gray-100 p-2 rounded-full text-gray-600">
-                                <i data-lucide="activity" class="w-6 h-6"></i>
+                            <div class="bg-gray-50 p-2 rounded-full text-gray-400">
+                                <i data-lucide="activity" class="w-5 h-5"></i>
                             </div>
                         </div>
-                        
-                        <p class="text-gray-600 mb-6 text-sm leading-relaxed border-l-4 border-blue-500 pl-3">
+                        <p class="text-gray-600 text-sm line-clamp-2 mb-4">
                             心体義塾 塾長の内田真弘が室長を務める、横浜国際プール内の治療室です。
                         </p>
-
-                        <div class="space-y-3 text-sm text-gray-600 mb-8">
-                            <div class="flex items-start gap-3">
-                                <i data-lucide="map" class="w-4 h-4 mt-1 flex-shrink-0 text-gray-400"></i>
-                                <span>〒224-0021 横浜市都筑区北山田7-3-1</span>
+                        <button onclick="toggleAccordion('acc-1')" class="text-blue-600 text-sm font-bold flex items-center gap-1 hover:text-blue-800 transition">
+                            詳細を見る <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- 詳細情報（アコーディオン） -->
+                    <div id="acc-1" class="accordion-content bg-gray-50">
+                        <div class="p-6 border-t border-gray-100 space-y-4">
+                            <p class="text-sm text-gray-600 border-l-4 border-blue-500 pl-3">
+                                心体義塾 塾長の内田真弘が室長を務める、横浜国際プール内の治療室です。
+                            </p>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map" class="w-4 h-4 mt-1 flex-shrink-0 text-gray-400"></i>
+                                    <span>〒224-0021 横浜市都筑区北山田7-3-1</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="phone" class="w-4 h-4 flex-shrink-0 text-gray-400"></i>
+                                    <a href="tel:045-592-1421" class="hover:text-blue-800 transition">045-592-1421</a>
+                                </div>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="phone" class="w-4 h-4 flex-shrink-0 text-gray-400"></i>
-                                <a href="tel:045-592-1421" class="hover:text-blue-800 transition">045-592-1421</a>
+                            <div class="pt-4">
+                                <a href="https://yokohama-sport.jp/waterarena/massage/" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-blue-900 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-blue-800 transition">
+                                    <i data-lucide="globe" class="w-4 h-4"></i> 公式サイト
+                                </a>
                             </div>
-                        </div>
-
-                        <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gray-100">
-                            <a href="https://yokohama-sport.jp/waterarena/massage/" target="_blank" class="flex-1 inline-flex items-center justify-center gap-2 bg-blue-900 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-blue-800 transition">
-                                <i data-lucide="globe" class="w-4 h-4"></i> 公式サイト
-                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- アスリートケア整骨院 -->
-                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition fade-up">
-                    <div class="p-8">
-                        <div class="flex items-start justify-between mb-4">
+                <!-- 2. アスリートケア整骨院 -->
+                <div class="bg-white rounded-xl shadow border border-gray-200 overflow-hidden hover:shadow-md transition fade-up flex flex-col">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
                             <div>
                                 <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded font-bold">神奈川・藤沢</span>
-                                <h3 class="text-2xl font-bold mt-2 text-gray-900">アスリートケア整骨院</h3>
+                                <h3 class="text-xl font-bold mt-2 text-gray-900">アスリートケア整骨院</h3>
                                 <p class="text-sm text-gray-500 mt-1">代表：金井 鋼ニ</p>
                             </div>
-                            <div class="bg-gray-100 p-2 rounded-full text-gray-600">
-                                <i data-lucide="activity" class="w-6 h-6"></i>
+                            <div class="bg-gray-50 p-2 rounded-full text-gray-400">
+                                <i data-lucide="activity" class="w-5 h-5"></i>
                             </div>
                         </div>
-                        
-                        <p class="text-gray-600 mb-6 text-sm leading-relaxed border-l-4 border-blue-500 pl-3">
+                        <p class="text-gray-600 text-sm line-clamp-2 mb-4">
                             アスリートの慢性痛は呼吸から！お気軽にご相談ください！
                         </p>
+                        <button onclick="toggleAccordion('acc-2')" class="text-blue-600 text-sm font-bold flex items-center gap-1 hover:text-blue-800 transition">
+                            詳細を見る <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                    </div>
 
-                        <div class="space-y-3 text-sm text-gray-600 mb-8">
-                            <div class="flex items-start gap-3">
-                                <i data-lucide="map" class="w-4 h-4 mt-1 flex-shrink-0 text-gray-400"></i>
-                                <span>〒252-0804 神奈川県藤沢市湘南台1-15-1</span>
+                    <!-- 詳細情報 -->
+                    <div id="acc-2" class="accordion-content bg-gray-50">
+                        <div class="p-6 border-t border-gray-100 space-y-4">
+                            <p class="text-sm text-gray-600 border-l-4 border-blue-500 pl-3">
+                                アスリートの慢性痛は呼吸から！お気軽にご相談ください！
+                            </p>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map" class="w-4 h-4 mt-1 flex-shrink-0 text-gray-400"></i>
+                                    <span>〒252-0804 神奈川県藤沢市湘南台1-15-1</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="phone" class="w-4 h-4 flex-shrink-0 text-gray-400"></i>
+                                    <a href="tel:0466-65-0189" class="hover:text-blue-800 transition">0466-65-0189</a>
+                                </div>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="phone" class="w-4 h-4 flex-shrink-0 text-gray-400"></i>
-                                <a href="tel:0466-65-0189" class="hover:text-blue-800 transition">0466-65-0189</a>
+                            <div class="flex flex-col gap-2 pt-4">
+                                <a href="https://athlete-care.net/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-blue-900 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-blue-800 transition">
+                                    <i data-lucide="globe" class="w-4 h-4"></i> 公式サイト
+                                </a>
+                                <a href="https://www.instagram.com/a.care_syounandai?r=nametag" target="_blank" class="inline-flex items-center justify-center gap-2 bg-pink-600 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-pink-700 transition">
+                                    <i data-lucide="instagram" class="w-4 h-4"></i> Instagram
+                                </a>
                             </div>
-                        </div>
-
-                        <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gray-100">
-                            <a href="https://athlete-care.net/" target="_blank" class="flex-1 inline-flex items-center justify-center gap-2 bg-blue-900 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-blue-800 transition">
-                                <i data-lucide="globe" class="w-4 h-4"></i> 公式サイト
-                            </a>
-                            <a href="https://www.instagram.com/a.care_syounandai?r=nametag" target="_blank" class="flex-1 inline-flex items-center justify-center gap-2 bg-pink-600 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-pink-700 transition">
-                                <i data-lucide="instagram" class="w-4 h-4"></i> Instagram
-                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- シラハタ接骨院 -->
-                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition fade-up">
-                    <div class="p-8">
-                        <div class="flex items-start justify-between mb-4">
+                <!-- 3. シラハタ接骨院 -->
+                <div class="bg-white rounded-xl shadow border border-gray-200 overflow-hidden hover:shadow-md transition fade-up flex flex-col">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
                             <div>
                                 <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded font-bold">神奈川・藤沢</span>
-                                <h3 class="text-2xl font-bold mt-2 text-gray-900">シラハタ接骨院</h3>
+                                <h3 class="text-xl font-bold mt-2 text-gray-900">シラハタ接骨院</h3>
                                 <p class="text-sm text-gray-500 mt-1">代表：伊藤 洋</p>
                             </div>
-                            <div class="bg-gray-100 p-2 rounded-full text-gray-600">
-                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            <div class="bg-gray-50 p-2 rounded-full text-gray-400">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
                             </div>
                         </div>
-                        
-                        <p class="text-gray-600 mb-6 text-sm leading-relaxed border-l-4 border-blue-500 pl-3">
+                        <p class="text-gray-600 text-sm line-clamp-2 mb-4">
                             本業とは別に高校バスケット部のコーチ・トレーナーとして27年活動しています。
                         </p>
+                        <button onclick="toggleAccordion('acc-3')" class="text-blue-600 text-sm font-bold flex items-center gap-1 hover:text-blue-800 transition">
+                            詳細を見る <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                    </div>
 
-                        <div class="space-y-3 text-sm text-gray-600 mb-8">
-                            <div class="flex items-start gap-3">
-                                <i data-lucide="map" class="w-4 h-4 mt-1 flex-shrink-0 text-gray-400"></i>
-                                <span>〒251-0053 神奈川県藤沢市本町4-8-39-102</span>
+                    <!-- 詳細情報 -->
+                    <div id="acc-3" class="accordion-content bg-gray-50">
+                        <div class="p-6 border-t border-gray-100 space-y-4">
+                            <p class="text-sm text-gray-600 border-l-4 border-blue-500 pl-3">
+                                本業とは別に高校バスケット部のコーチ・トレーナーとして27年活動しています。
+                            </p>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map" class="w-4 h-4 mt-1 flex-shrink-0 text-gray-400"></i>
+                                    <span>〒251-0053 神奈川県藤沢市本町4-8-39-102</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="phone" class="w-4 h-4 flex-shrink-0 text-gray-400"></i>
+                                    <a href="tel:0466-22-5520" class="hover:text-blue-800 transition">0466-22-5520</a>
+                                </div>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <i data-lucide="phone" class="w-4 h-4 flex-shrink-0 text-gray-400"></i>
-                                <a href="tel:0466-22-5520" class="hover:text-blue-800 transition">0466-22-5520</a>
+                            <div class="flex flex-col gap-2 pt-4">
+                                <a href="https://shirahata-sejutsu.com/" target="_blank" class="inline-flex items-center justify-center gap-2 bg-blue-900 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-blue-800 transition">
+                                    <i data-lucide="globe" class="w-4 h-4"></i> 公式サイト
+                                </a>
+                                <a href="https://x.com/shirahata_bs?s=21&t=OHI4NBj2sXCGRRGag_9elg" target="_blank" class="inline-flex items-center justify-center gap-2 bg-black text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-gray-800 transition">
+                                    <i data-lucide="twitter" class="w-4 h-4"></i> X (Twitter)
+                                </a>
                             </div>
-                        </div>
-
-                        <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gray-100">
-                            <a href="https://shirahata-sejutsu.com/" target="_blank" class="flex-1 inline-flex items-center justify-center gap-2 bg-blue-900 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-blue-800 transition">
-                                <i data-lucide="globe" class="w-4 h-4"></i> 公式サイト
-                            </a>
-                            <a href="https://x.com/shirahata_bs?s=21&t=OHI4NBj2sXCGRRGag_9elg" target="_blank" class="flex-1 inline-flex items-center justify-center gap-2 bg-black text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-gray-800 transition">
-                                <i data-lucide="twitter" class="w-4 h-4"></i> X (Twitter)
-                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 掲載枠募集中（プレースホルダー） -->
-                <div class="bg-gray-50 rounded-xl border border-dashed border-gray-300 flex flex-col items-center justify-center p-10 text-center fade-up text-gray-400">
-                    <i data-lucide="users" class="w-12 h-12 mb-4 opacity-50"></i>
-                    <h3 class="text-lg font-bold mb-2">Comming Soon</h3>
-                    <p class="text-sm">現在、提携ネットワークを拡大中です。</p>
+                <!-- 4. Re Life Challenge from 0 -->
+                <div class="bg-white rounded-xl shadow border border-gray-200 overflow-hidden hover:shadow-md transition fade-up flex flex-col">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded font-bold">東京・大田/江東</span>
+                                <h3 class="text-xl font-bold mt-2 text-gray-900">Re Life Challenge from 0</h3>
+                                <p class="text-sm text-gray-500 mt-1">代表：有田 亘希</p>
+                            </div>
+                            <div class="bg-gray-50 p-2 rounded-full text-gray-400">
+                                <i data-lucide="user" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm line-clamp-2 mb-4">
+                            姿勢改善/呼吸改善/尻トレ/パフォーマンス向上などあなたに寄り添い変わりたい目標に向けてサポートします。
+                        </p>
+                        <button onclick="toggleAccordion('acc-4')" class="text-blue-600 text-sm font-bold flex items-center gap-1 hover:text-blue-800 transition">
+                            詳細を見る <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+
+                    <!-- 詳細情報 -->
+                    <div id="acc-4" class="accordion-content bg-gray-50">
+                        <div class="p-6 border-t border-gray-100 space-y-4">
+                            <p class="text-sm text-gray-600 border-l-4 border-blue-500 pl-3">
+                                姿勢改善/呼吸改善/尻トレ/パフォーマンス向上など<br>あなたに寄り添い変わりたい目標に向けてサポートします。
+                            </p>
+                            <div class="space-y-2 text-sm text-gray-600">
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map" class="w-4 h-4 mt-1 flex-shrink-0 text-gray-400"></i>
+                                    <span>東京都大田区中馬込 / 東京都江東区亀戸 他</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="youtube" class="w-4 h-4 flex-shrink-0 text-red-500"></i>
+                                    <a href="https://www.youtube.com/@a_ri_chan" target="_blank" class="hover:text-blue-800 transition">アーリーチャンネル</a>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-2 pt-4">
+                                <a href="https://ourl.jp/U6vQJ" target="_blank" class="inline-flex items-center justify-center gap-2 bg-blue-900 text-white px-3 py-2 rounded-lg text-sm font-bold hover:bg-blue-800 transition">
+                                    <i data-lucide="globe" class="w-4 h-4"></i> HP
+                                </a>
+                                <a href="https://lin.ee/UtcLphl" target="_blank" class="inline-flex items-center justify-center gap-2 bg-green-500 text-white px-3 py-2 rounded-lg text-sm font-bold hover:bg-green-600 transition">
+                                    <i data-lucide="message-circle" class="w-4 h-4"></i> LINE
+                                </a>
+                                <a href="https://www.instagram.com/aa_ri_channel/" target="_blank" class="col-span-2 inline-flex items-center justify-center gap-2 bg-pink-600 text-white px-3 py-2 rounded-lg text-sm font-bold hover:bg-pink-700 transition">
+                                    <i data-lucide="instagram" class="w-4 h-4"></i> Instagram
+                                </a>
+                            </div>
+
+                            <div class="pt-2 border-t border-gray-200 text-xs text-gray-500">
+                                <p class="font-bold mb-1">活動拠点・提携ジム：</p>
+                                <ul class="list-disc list-inside space-y-1">
+                                    <li><a href="https://www.blazefitness.jp/" target="_blank" class="hover:text-blue-800 underline">The Blaze fit Magome</a></li>
+                                    <li><a href="https://www.jexer.jp/fitness/kameido/" target="_blank" class="hover:text-blue-800 underline">Jexer 亀戸</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 掲載枠募集中 -->
+                <div class="bg-gray-50 rounded-xl border border-dashed border-gray-300 flex flex-col items-center justify-center p-8 text-center fade-up text-gray-400 md:col-span-2 lg:col-span-1">
+                    <i data-lucide="users" class="w-10 h-10 mb-3 opacity-50"></i>
+                    <h3 class="text-base font-bold mb-1">Comming Soon</h3>
+                    <p class="text-xs">現在、提携ネットワークを拡大中です。</p>
                 </div>
 
             </div>
@@ -226,6 +326,13 @@
             });
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // アコーディオン開閉
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            content.classList.toggle('open');
+            // アイコンの向きを変えるなどの処理もここに追加可能
+        }
     </script>
 </body>
 </html>
