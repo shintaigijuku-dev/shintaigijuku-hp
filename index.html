@@ -145,12 +145,12 @@
     <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-serif font-bold tracking-widest text-gray-900">
-                <a href="#">心体義塾</a>
+                <a href="index.html">心体義塾</a>
             </h1>
             <nav class="hidden md:flex space-x-8">
-                <a href="#about" class="text-sm font-medium hover:text-blue-700 transition">心体義塾について</a>
+                <a href="about.html" class="text-sm font-medium hover:text-blue-700 transition">理論と哲学・塾長紹介</a>
+                <a href="network.html" class="text-sm font-medium hover:text-blue-700 transition">認定院・トレーナー</a>
                 <a href="#workshop" class="text-sm font-medium hover:text-blue-700 transition">最新ワークショップ</a>
-                <a href="#profile" class="text-sm font-medium hover:text-blue-700 transition">塾長紹介</a>
                 <a href="#blog" class="text-sm font-medium hover:text-blue-700 transition">ブログ</a>
                 <a href="#contact" class="px-5 py-2 bg-blue-900 text-white text-sm rounded-full hover:bg-blue-800 transition">お問い合わせ</a>
             </nav>
@@ -161,15 +161,16 @@
         </div>
         <!-- モバイルメニュー -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <a href="#about" class="block px-4 py-3 hover:bg-gray-50">心体義塾について</a>
+            <a href="about.html" class="block px-4 py-3 hover:bg-gray-50">理論と哲学・塾長紹介</a>
+            <a href="network.html" class="block px-4 py-3 hover:bg-gray-50">認定院・トレーナー</a>
             <a href="#workshop" class="block px-4 py-3 hover:bg-gray-50">最新ワークショップ</a>
-            <a href="#profile" class="block px-4 py-3 hover:bg-gray-50">塾長紹介</a>
             <a href="#blog" class="block px-4 py-3 hover:bg-gray-50">ブログ</a>
             <a href="#contact" class="block px-4 py-3 hover:bg-gray-50 text-blue-800 font-bold">お問い合わせ</a>
         </div>
     </header>
 
     <!-- フローティング申し込みボタン（追従ボタン） -->
+    <!-- 残り席数を表示し、文字色を黄色にして目立たせました -->
     <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[100] bg-blue-800 text-white px-5 py-3 md:px-6 md:py-4 rounded-full font-bold shadow-2xl flex items-center gap-2 md:gap-3 hover:bg-blue-700 transition-all transform hover:scale-105 animate-pulse-shadow border-2 border-white/20">
         <i data-lucide="edit-3" class="w-5 h-5"></i>
         <div class="text-left leading-tight">
@@ -254,103 +255,7 @@
         </div>
     </section>
 
-    <!-- 心体義塾について -->
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4 max-w-6xl">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="fade-up order-2 md:order-1">
-                    <!-- 瞑想の画像をJPEGファイルに変更、alt属性を日本語化 -->
-                    <img src="meditation-image.jpg" alt="呼吸法と瞑想を行う様子" class="rounded-lg shadow-xl w-full object-cover h-[500px]">
-                </div>
-                <div class="fade-up order-1 md:order-2">
-                    <span class="text-blue-800 font-bold tracking-widest text-sm uppercase">Philosophy</span>
-                    <h3 class="text-3xl font-serif font-bold mt-2 mb-6">東洋の叡智を、<br>現代の「呼吸」で紐解く。</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        心体義塾は、武道教育を中心に心身の鍛錬と人間形成を目指す教育機関です。
-                    </p>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        東洋医学において重要な概念である「気」。それは目に見えず、感覚的で捉えにくいものです。
-                        心体義塾では、この「気」を現代人が誰でも実践できる「呼吸」という動作に変換し、科学的な視点（ポリヴェーガル理論）から再構築しました。
-                    </p>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        呼吸を通じて自律神経を調律（チューニング）し、人間が本来持っているポテンシャルを最大限に引き出す。
-                        それが私たちが提唱するメソッド「ZAT」です。
-                    </p>
-                    <div class="bg-white p-6 rounded-lg border-l-4 border-blue-800 shadow-sm">
-                        <h4 class="font-bold text-blue-900 mb-2">ZAT（ZEROSHIKI ATTITUDE TUNING）</h4>
-                        <p class="text-sm text-gray-600">
-                            通称「ゼロ式姿勢調律法」。<br>
-                            意識的なコントロール（Awareness）を超えた、無意識レベルでの身体調整を行う独自のメソッドです。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 塾長プロフィール -->
-    <section id="profile" class="py-20 bg-white">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="text-center mb-12 fade-up">
-                <span class="text-blue-800 font-bold tracking-widest text-sm uppercase">Founder</span>
-                <h3 class="text-3xl font-serif font-bold mt-2">塾長紹介</h3>
-                <div class="w-12 h-1 bg-blue-800 mx-auto mt-4"></div>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-10 fade-up">
-                <div class="md:w-1/3 text-center">
-                    <!-- プレースホルダー画像: 実際は内田塾長の写真を設定 -->
-                    <div class="w-48 h-48 md:w-64 md:h-64 mx-auto bg-gray-200 rounded-full overflow-hidden border-4 border-gray-100 shadow-lg relative">
-                        <!-- 塾長の画像をJPEGファイルに変更 -->
-                        <img src="founder-image.jpg" alt="心体義塾 塾長 内田真弘" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/10">
-                            <!-- 実際の運用ではここに塾長の写真を入れてください -->
-                        </div>
-                    </div>
-                    <h4 class="text-xl font-bold mt-6 mb-1">内田 真弘</h4>
-                    <p class="text-sm text-gray-500">Masahiro Uchida</p>
-                    <p class="text-xs text-blue-800 font-bold mt-2">心体義塾 塾長 / ZAT創始者</p>
-                </div>
-                <div class="md:w-2/3">
-                    <ul class="text-sm text-gray-700 space-y-2 mb-6 bg-gray-50 p-5 rounded-lg">
-                        <li class="flex gap-2"><span class="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span><span>神奈川衛生学園専門学校 東洋医療総合学科 教員</span></li>
-                        <li class="flex gap-2"><span class="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span><span>筑波大学 理療科教員養成施設 非常勤講師</span></li>
-                        <li class="flex gap-2"><span class="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span><span>横浜国際プールはりきゅうマッサージ室 室長</span></li>
-                        <li class="flex gap-2"><span class="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span><span>ドイツ ＶＰＴアカデミー認定 スポーツフィジオセラピスト</span></li>
-                        <li class="flex gap-2"><span class="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span><span>PNF（固有受容体性 神経筋 促通法）資格保持者</span></li>
-                    </ul>
-                    <p class="text-gray-600 leading-relaxed mb-4">
-                        武道の精神と身体操作をベースに、人間が本来持っている潜在能力を引き出す指導を行う。
-                    </p>
-                    <p class="text-gray-600 leading-relaxed mb-4">
-                        東洋医学で重要視される「気」の概念を、より多くの人に論理的に理解してもらうため、誰もが行う「呼吸」に着目。自律神経理論（ポリヴェーガル理論）を基礎とした独自の調整法「ZAT（ZEROSHIKI ATTITUDE TUNING / ゼロ式姿勢調律法）」を確立した。
-                    </p>
-                    <p class="text-gray-600 leading-relaxed mb-6">
-                        「心と体は一つである」という心身一如の理念のもと、慢性痛の改善からアスリートのパフォーマンス向上まで、呼吸と姿勢を通じた根本的な身体改革を指導している。
-                    </p>
-                    
-                    <div class="flex flex-col gap-4">
-                        <!-- アメブロボタンはここから削除し、下の自動表示セクションへ誘導 -->
-                        <div class="mt-4">
-                            <p class="text-sm font-bold text-gray-700 mb-3 border-b pb-1">著書（Amazon）</p>
-                            <div class="flex flex-col gap-2">
-                                <a href="https://www.amazon.co.jp/%E5%86%85%E7%94%B0%E5%BC%8F-%E9%A2%A8%E8%88%B9%E3%82%A8%E3%82%AF%E3%82%B5%E3%82%B5%E3%82%A4%E3%82%BA-%E5%86%85%E7%94%B0-%E7%9C%9F%E5%BC%98/dp/4817070579" target="_blank" class="text-blue-700 hover:text-blue-900 hover:underline flex items-start gap-2 text-sm">
-                                    <i data-lucide="book" class="w-4 h-4 mt-0.5 flex-shrink-0"></i>
-                                    <span>内田式風船エクササイズ（日貿出版社）</span>
-                                </a>
-                                <a href="https://www.amazon.co.jp/%E8%B2%A0%E3%81%91%E3%81%AA%E3%81%84%E3%83%A1%E3%83%B3%E3%82%BF%E3%83%AB%E3%81%A8%E3%83%95%E3%82%A3%E3%82%B8%E3%82%AB%E3%83%AB%E3%81%AE%E3%81%A4%E3%81%8F%E3%82%8A%E6%96%B9-%E5%86%85%E7%94%B0%E7%9C%9F%E5%BC%98/dp/4866669756/" target="_blank" class="text-blue-700 hover:text-blue-900 hover:underline flex items-start gap-2 text-sm">
-                                    <i data-lucide="book" class="w-4 h-4 mt-0.5 flex-shrink-0"></i>
-                                    <span>負けないメンタルとフィジカルの作り方</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 【NEW】塾長ブログ（自動表示） -->
+    <!-- 塾長ブログ（自動表示） -->
     <section id="blog" class="py-20 bg-green-50 border-t border-b border-gray-200">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="text-center mb-12 fade-up">
@@ -491,6 +396,7 @@
             <div class="flex justify-center space-x-6 mb-8">
                 <a href="index.html" class="hover:text-white transition">Home</a>
                 <a href="about.html" class="hover:text-white transition">About & Philosophy</a>
+                <a href="network.html" class="hover:text-white transition">Network</a>
                 <a href="#contact" class="hover:text-white transition">Contact</a>
             </div>
             <p class="text-xs">&copy; 2025 Shintai Gijuku. All Rights Reserved.</p>
@@ -521,10 +427,14 @@
             });
         });
 
-        // アメブロRSS取得処理
+        // アメブロRSS取得処理 (画像取得強化版)
         document.addEventListener('DOMContentLoaded', function() {
-            const rssUrl = 'https://rssblog.ameba.jp/testosteron-iron77/rss2.xml';
+            // RSS URLを http に変更（安定性向上のため）
+            const rssUrl = 'http://rssblog.ameba.jp/testosteron-iron77/rss2.xml';
             const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rssUrl);
+            
+            // デフォルト画像の設定（フォールバック用）
+            const defaultImg = 'founder-image.jpg'; // 塾長の写真などを指定
 
             fetch(apiUrl)
                 .then(response => response.json())
@@ -534,23 +444,35 @@
                         container.innerHTML = '';
                         
                         data.items.slice(0, 3).forEach(item => {
-                            // 日付整形
                             const date = new Date(item.pubDate);
                             const dateStr = `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}`;
                             
-                            // 画像抽出 (RSS2JSONはdescription内にimgタグがある場合が多い)
-                            let imgUrl = 'hero-image.jpg'; // デフォルト画像
-                            const imgMatch = item.description.match(/src="([^"]+)"/);
-                            if (imgMatch) {
-                                imgUrl = imgMatch[1];
-                            } else if (item.thumbnail) {
+                            // 画像抽出ロジック強化
+                            let imgUrl = defaultImg;
+                            
+                            // 1. thumbnailプロパティを確認
+                            if (item.thumbnail && item.thumbnail.startsWith('http')) {
                                 imgUrl = item.thumbnail;
+                            } 
+                            // 2. description内のimgタグを検索
+                            else {
+                                const imgMatch = item.description.match(/<img[^>]+src="([^">]+)"/);
+                                if (imgMatch && imgMatch[1]) {
+                                    imgUrl = imgMatch[1];
+                                }
+                                // 3. content内のimgタグを検索 (rss2jsonの場合)
+                                else if (item.content) {
+                                    const contentImgMatch = item.content.match(/<img[^>]+src="([^">]+)"/);
+                                    if (contentImgMatch && contentImgMatch[1]) {
+                                        imgUrl = contentImgMatch[1];
+                                    }
+                                }
                             }
 
                             const html = `
                                 <a href="${item.link}" target="_blank" class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden group border border-gray-100 flex flex-col h-full">
                                     <div class="h-48 overflow-hidden bg-gray-200 relative">
-                                        <img src="${imgUrl}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                                        <img src="${imgUrl}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='${defaultImg}'">
                                         <div class="absolute top-0 right-0 bg-green-600 text-white text-xs px-3 py-1 font-bold rounded-bl-lg">Ameba</div>
                                     </div>
                                     <div class="p-6 flex flex-col flex-grow">
@@ -566,13 +488,24 @@
                             `;
                             container.innerHTML += html;
                         });
-                        // アイコン再レンダリング
                         lucide.createIcons();
+                    } else {
+                        throw new Error('API status not ok');
                     }
                 })
                 .catch(error => {
-                    console.error('RSS load failed', error);
-                    document.getElementById('blog-posts').innerHTML = '<div class="col-span-3 text-center"><p class="text-gray-500 mb-4">ブログの読み込みに失敗しました。</p><a href="https://ameblo.jp/testosteron-iron77/" target="_blank" class="inline-block bg-green-600 text-white px-6 py-2 rounded-full font-bold hover:bg-green-700 transition">アメブロを直接見る</a></div>';
+                    // console.error から console.warn に変更し、エラーの詳細を記述
+                    console.warn('RSS load failed (This might be due to API rate limits in the preview environment):', error);
+                    
+                    // エラー時のフォールバック表示
+                    document.getElementById('blog-posts').innerHTML = `
+                        <div class="col-span-3 text-center py-8">
+                            <p class="text-gray-500 mb-4">現在、最新記事の自動取得が一時的に利用できません。<br>以下のボタンからアメブロをご覧ください。</p>
+                            <a href="https://ameblo.jp/testosteron-iron77/" target="_blank" class="inline-block bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition shadow-md">
+                                アメブロを直接見る
+                            </a>
+                        </div>
+                    `;
                 });
         });
     </script>

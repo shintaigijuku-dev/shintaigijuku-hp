@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZM3T31SCB"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -26,6 +27,7 @@
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
+    <!-- ナビゲーション -->
     <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-serif font-bold tracking-widest text-gray-900">
@@ -33,8 +35,8 @@
             </h1>
             <nav class="hidden md:flex space-x-8">
                 <a href="about.html" class="text-sm font-medium text-blue-800 font-bold">理論と哲学・塾長紹介</a>
+                <a href="network.html" class="text-sm font-medium hover:text-blue-700 transition">認定院・トレーナー</a>
                 <a href="index.html#workshop" class="text-sm font-medium hover:text-blue-700 transition">最新ワークショップ</a>
-                <a href="index.html#activities" class="text-sm font-medium hover:text-blue-700 transition">活動内容</a>
                 <a href="index.html#contact" class="px-5 py-2 bg-blue-900 text-white text-sm rounded-full hover:bg-blue-800 transition">お問い合わせ</a>
             </nav>
             <button class="md:hidden text-gray-700" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
@@ -43,12 +45,13 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <a href="about.html" class="block px-4 py-3 bg-gray-50 text-blue-800 font-bold">理論と哲学・塾長紹介</a>
+            <a href="network.html" class="block px-4 py-3 hover:bg-gray-50">認定院・トレーナー</a>
             <a href="index.html#workshop" class="block px-4 py-3 hover:bg-gray-50">最新ワークショップ</a>
-            <a href="index.html#activities" class="block px-4 py-3 hover:bg-gray-50">活動内容</a>
             <a href="index.html#contact" class="block px-4 py-3 hover:bg-gray-50 text-blue-800 font-bold">お問い合わせ</a>
         </div>
     </header>
 
+    <!-- ヘッダーエリア -->
     <div class="bg-gray-900 text-white pt-32 pb-20">
         <div class="container mx-auto px-4 text-center fade-up">
             <h1 class="text-3xl md:text-5xl font-serif font-bold mb-4">心体義塾の理論と哲学</h1>
@@ -56,6 +59,7 @@
         </div>
     </div>
 
+    <!-- 哲学セクション -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="mb-16 fade-up">
@@ -73,11 +77,13 @@
                         </p>
                     </div>
                     <div>
+                        <!-- 瞑想画像を配置 -->
                         <img src="meditation-image.jpg" alt="呼吸法" class="rounded-lg shadow-xl w-full">
                     </div>
                 </div>
             </div>
             
+            <!-- ZAT理論（エントロピー） -->
             <div class="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100 fade-up">
                 <div class="text-center mb-10">
                     <h3 class="text-2xl md:text-3xl font-serif font-bold text-gray-900">何故、ZATメソッドなのか？</h3>
@@ -117,6 +123,7 @@
         </div>
     </section>
 
+    <!-- 塾長プロフィール -->
     <section id="profile" class="py-20 bg-white border-t border-gray-100">
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="text-center mb-12 fade-up">
@@ -136,7 +143,13 @@
                 </div>
                 <div class="md:w-2/3">
                     <ul class="text-sm text-gray-700 space-y-2 mb-6 bg-gray-50 p-5 rounded-lg">
-                        <li class="flex gap-2"><span class="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span><span>神奈川衛生学園専門学校 東洋医療総合学科 教員</span></li>
+                        <!-- URLリンク追加 -->
+                        <li class="flex gap-2">
+                            <span class="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span>
+                            <span>
+                                <a href="https://www.keg.ac.jp/" target="_blank" class="hover:text-blue-600 hover:underline">神奈川衛生学園専門学校</a> 東洋医療総合学科 教員
+                            </span>
+                        </li>
                         <li class="flex gap-2"><span class="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span><span>筑波大学 理療科教員養成施設 非常勤講師</span></li>
                         <li class="flex gap-2"><span class="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span><span>横浜国際プールはりきゅうマッサージ室 室長</span></li>
                         <li class="flex gap-2"><span class="w-1.5 h-1.5 bg-blue-800 rounded-full mt-2 flex-shrink-0"></span><span>ドイツ ＶＰＴアカデミー認定 スポーツフィジオセラピスト</span></li>
@@ -170,6 +183,7 @@
         </div>
     </section>
     
+    <!-- ワークショップへの誘導 -->
     <section class="py-20 bg-blue-900 text-white text-center">
         <div class="container mx-auto px-4">
             <h3 class="text-2xl font-bold mb-6">ZATメソッドを体験する</h3>
@@ -180,12 +194,14 @@
         </div>
     </section>
 
+    <!-- フッター -->
     <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-2xl font-serif font-bold text-white mb-4">心体義塾</h2>
             <div class="flex justify-center space-x-6 mb-8">
                 <a href="index.html" class="hover:text-white transition">Home</a>
                 <a href="about.html" class="hover:text-white transition">About & Philosophy</a>
+                <a href="network.html" class="hover:text-white transition">Network</a>
                 <a href="index.html#contact" class="hover:text-white transition">Contact</a>
             </div>
             <p class="text-xs">&copy; 2025 Shintai Gijuku. All Rights Reserved.</p>
