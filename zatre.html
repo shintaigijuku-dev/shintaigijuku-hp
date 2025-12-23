@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZM3T31SCB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-QZM3T31SCB');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZATRE - 動物本来の動作を取り戻すトレーニング | 心体義塾</title>
+    <meta name="description" content="心体義塾が提唱する「ZATRE（ザットレ）」。現代の筋肥大トレーニングではなく、呼吸と運動を連動させ、人間という動物が本来持っているしなやかな動作を再起動させるトレーニング理論。">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;600&display=swap');
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-serif { font-family: 'Shippori Mincho', serif; }
+        .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        
+        /* ヒーローセクションの背景画像設定 */
+        .zatre-hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('zatre-hero.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* サムネイル画像のホバーエフェクト */
+        .thumbnail-container:hover .play-icon {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+    <!-- ナビゲーション -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-serif font-bold tracking-widest text-gray-900">
+                <a href="index.html">心体義塾</a>
+            </h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="about.html" class="text-sm font-medium hover:text-blue-700 transition">理論と哲学・塾長紹介</a>
+                <a href="network.html" class="text-sm font-medium hover:text-blue-700 transition">認定院・トレーナー</a>
+                <a href="zatre.html" class="text-sm font-medium text-blue-800 font-bold border-b-2 border-blue-800">ZATRE</a>
+                <a href="index.html#workshop" class="text-sm font-medium hover:text-blue-700 transition">最新ワークショップ</a>
+                <a href="index.html#contact" class="px-5 py-2 bg-blue-900 text-white text-sm rounded-full hover:bg-blue-800 transition">お問い合わせ</a>
+            </nav>
+            <button class="md:hidden text-gray-700" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="about.html" class="block px-4 py-3 hover:bg-gray-50">理論と哲学・塾長紹介</a>
+            <a href="network.html" class="block px-4 py-3 hover:bg-gray-50">認定院・トレーナー</a>
+            <a href="zatre.html" class="block px-4 py-3 bg-gray-50 text-blue-800 font-bold">ZATRE</a>
+            <a href="index.html#workshop" class="block px-4 py-3 hover:bg-gray-50">最新ワークショップ</a>
+            <a href="index.html#contact" class="block px-4 py-3 hover:bg-gray-50 text-blue-800 font-bold">お問い合わせ</a>
+        </div>
+    </header>
+
+    <!-- ヒーロー -->
+    <div class="zatre-hero-bg text-white pt-40 pb-28 relative overflow-hidden">
+        <div class="container mx-auto px-4 text-center relative z-10 fade-up">
+            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 italic tracking-tighter text-white drop-shadow-lg">ZATRE</h1>
+            <p class="text-xl md:text-2xl font-light text-gray-100 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+                「効かせる」トレーニングから、<br class="hidden md:block">「連動させる」動作へ。
+            </p>
+        </div>
+    </div>
+
+    <!-- コンセプト比較 -->
+    <section class="py-20 bg-white border-b">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-up">
+                    <h2 class="text-3xl font-serif font-bold mb-6 text-gray-900 leading-tight">
+                        筋肥大の時代はもう終わり。<br>
+                        あなたの身体は、<br>もっと自由に動ける。
+                    </h2>
+                    <!-- 説明文変更 -->
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        筋肉をパーツごとに肥大させるだけのトレーニングでは、真に「動ける身体」は手に入りません。高重量を扱いバルクアップする事は、真のアスリートには必要ありません。
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        ZATRE（ザットレ）は、呼吸と運動を完全に一致させ、全身の連動性を引き出すワークアウトです。目指すのは、野生動物のような無駄のない、美しく力強い動作です。
+                    </p>
+                </div>
+                <div class="fade-up">
+                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-inner">
+                        <ul class="space-y-6">
+                            <li class="flex items-start gap-4">
+                                <div class="bg-blue-900 p-1 rounded-full mt-1">
+                                    <i data-lucide="check" class="text-white w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-blue-900 block text-lg mb-1">呼吸の調律</strong>
+                                    <span class="text-gray-600 text-sm">止める呼吸から、動きを加速させる呼吸へ。</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="bg-blue-900 p-1 rounded-full mt-1">
+                                    <i data-lucide="check" class="text-white w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-blue-900 block text-lg mb-1">全身連動</strong>
+                                    <span class="text-gray-600 text-sm">筋肉を固めるのではなく、バネのように繋がる身体を作ります。</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="bg-blue-900 p-1 rounded-full mt-1">
+                                    <i data-lucide="check" class="text-white w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <strong class="text-blue-900 block text-lg mb-1">本来の機能</strong>
+                                    <span class="text-gray-600 text-sm">不調の原因となる「身体のバグ」を解除し、能力を解放します。</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube ギャラリー -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-blue-800 font-bold tracking-widest text-sm uppercase">YouTube Project</span>
+                <h3 class="text-3xl font-serif font-bold mt-2">最新の ZATRE 動画</h3>
+                <p class="text-gray-500 mt-4">動画をクリックするとYouTubeで再生されます</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 動画 1: m1_JD_bKQnE -->
+                <div class="fade-up shadow-lg rounded-2xl overflow-hidden bg-white group border border-gray-100 flex flex-col">
+                    <a href="https://www.youtube.com/watch?v=m1_JD_bKQnE" target="_blank" class="thumbnail-container relative block h-48 overflow-hidden bg-black">
+                        <!-- サムネイル画像 -->
+                        <img src="https://img.youtube.com/vi/m1_JD_bKQnE/hqdefault.jpg" alt="ベンチプレス革命" class="w-full h-full object-cover opacity-90 transition duration-500">
+                        <!-- 再生ボタンアイコン -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="play-icon w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-lg transition duration-300">
+                                <i data-lucide="play" class="w-6 h-6 text-white fill-current ml-1"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="p-6 text-left flex-grow">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-red-100 text-red-600 text-[10px] font-bold px-2 py-0.5 rounded">NEW</span>
+                            <span class="text-gray-400 text-xs tracking-tighter">Episode 01</span>
+                        </div>
+                        <h4 class="font-bold text-gray-900 group-hover:text-blue-700 transition leading-snug">【ベンチプレス革命】心体義塾で徹底解剖！！</h4>
+                    </div>
+                </div>
+
+                <!-- 動画 2: ExC7rrFKjf0 -->
+                <div class="fade-up shadow-lg rounded-2xl overflow-hidden bg-white group border border-gray-100 flex flex-col" style="transition-delay: 100ms;">
+                    <a href="https://www.youtube.com/watch?v=ExC7rrFKjf0" target="_blank" class="thumbnail-container relative block h-48 overflow-hidden bg-black">
+                        <img src="https://img.youtube.com/vi/ExC7rrFKjf0/hqdefault.jpg" alt="呼吸の基礎" class="w-full h-full object-cover opacity-90 transition duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="play-icon w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-lg transition duration-300">
+                                <i data-lucide="play" class="w-6 h-6 text-white fill-current ml-1"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="p-6 text-left flex-grow">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-600 text-[10px] font-bold px-2 py-0.5 rounded">CONCEPT</span>
+                            <span class="text-gray-400 text-xs tracking-tighter">Episode 02</span>
+                        </div>
+                        <h4 class="font-bold text-gray-900 group-hover:text-blue-700 transition leading-snug">これが本当の呼吸法〜心体義塾の呼吸の基礎その１【舌の位置】〜</h4>
+                    </div>
+                </div>
+
+                <!-- 動画 3: W34m16G17uo -->
+                <div class="fade-up shadow-lg rounded-2xl overflow-hidden bg-white group border border-gray-100 flex flex-col" style="transition-delay: 200ms;">
+                    <a href="https://www.youtube.com/watch?v=W34m16G17uo" target="_blank" class="thumbnail-container relative block h-48 overflow-hidden bg-black">
+                        <img src="https://img.youtube.com/vi/W34m16G17uo/hqdefault.jpg" alt="アームカール" class="w-full h-full object-cover opacity-90 transition duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="play-icon w-14 h-14 bg-red-600 rounded-full flex items-center justify-center shadow-lg transition duration-300">
+                                <i data-lucide="play" class="w-6 h-6 text-white fill-current ml-1"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="p-6 text-left flex-grow">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-blue-100 text-blue-600 text-[10px] font-bold px-2 py-0.5 rounded">METHOD</span>
+                            <span class="text-gray-400 text-xs tracking-tighter">Episode 03</span>
+                        </div>
+                        <h4 class="font-bold text-gray-900 group-hover:text-blue-700 transition leading-snug">ベンチプレスが上手くなるアームカール</h4>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-12 fade-up">
+                <a href="https://www.youtube.com/@%E5%BF%83%E4%BD%93%E7%BE%A9%E5%A1%BE-%E5%91%BC%E5%90%B8%E9%81%93" target="_blank" class="inline-flex items-center gap-3 bg-red-600 text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 transition shadow-lg">
+                    <i data-lucide="youtube" class="w-6 h-6"></i> YouTubeチャンネルで最新のザットレを見る
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 申し込み誘導 -->
+    <section class="py-24 bg-blue-900 text-white relative overflow-hidden text-center">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 L100 0" stroke="white" stroke-width="0.5" />
+                <path d="M0 80 L80 0" stroke="white" stroke-width="0.5" />
+                <path d="M20 100 L100 20" stroke="white" stroke-width="0.5" />
+            </svg>
+        </div>
+        <div class="container mx-auto px-4 relative z-10 fade-up">
+            <h3 class="text-3xl md:text-4xl font-serif font-bold mb-8 italic">Move Like an Animal.</h3>
+            <p class="text-blue-100 mb-12 max-w-2xl mx-auto text-lg leading-relaxed">
+                動画だけでは解けない、あなたの身体の「固さ」があります。<br>
+                ワークショップで呼吸の調律を体験し、本来の動きを呼び覚ましましょう。
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="index.html#workshop" class="bg-white text-blue-900 px-12 py-4 rounded-full font-bold hover:bg-gray-100 transition shadow-xl text-center">
+                    2/11 ワークショップ詳細
+                </a>
+                <a href="network.html" class="bg-transparent text-white border-2 border-white px-12 py-4 rounded-full font-bold hover:bg-white/10 transition text-center">
+                    近くの認定トレーナーを探す
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-gray-900 text-gray-400 py-16 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-serif font-bold text-white mb-6 tracking-widest">心体義塾</h2>
+            <div class="flex justify-center space-x-6 mb-10 flex-wrap gap-y-4">
+                <a href="index.html" class="hover:text-white transition text-sm">ホーム</a>
+                <a href="about.html" class="hover:text-white transition text-sm">理論と哲学</a>
+                <a href="network.html" class="hover:text-white transition text-sm">認定院・ネットワーク</a>
+                <a href="zatre.html" class="text-white font-bold transition text-sm">ZATRE</a>
+                <a href="index.html#contact" class="hover:text-white transition text-sm">お問い合わせ</a>
+            </div>
+            <p class="text-[10px] opacity-50 tracking-widest uppercase">&copy; 2025 Shintai Gijuku. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
