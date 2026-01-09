@@ -39,12 +39,18 @@
         }
         .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
+        
+        /* フローティングボタンのアニメーション（緊急色：赤に変更） */
         @keyframes pulse-shadow {
-            0% { box-shadow: 0 0 0 0 rgba(30, 64, 175, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(30, 64, 175, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(30, 64, 175, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
         }
-        .animate-pulse-shadow { animation: pulse-shadow 2s infinite; }
+        .animate-pulse-shadow {
+            animation: pulse-shadow 2s infinite;
+        }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased relative">
@@ -73,17 +79,20 @@
             <a href="network.html" class="block px-4 py-3 hover:bg-gray-50">認定院・トレーナー</a>
             <a href="zatre.html" class="block px-4 py-3 hover:bg-gray-50 text-blue-800 font-bold">ZATRE</a>
             <a href="#workshop" class="block px-4 py-3 hover:bg-gray-50">最新ワークショップ</a>
+            <a href="#blog" class="block px-4 py-3 hover:bg-gray-50">ブログ</a>
             <a href="#contact" class="block px-4 py-3 hover:bg-gray-50 text-blue-800 font-bold">お問い合わせ</a>
         </div>
     </header>
 
     <!-- フローティング申し込みボタン（追従ボタン） -->
-    <!-- 残り席数を【残り9席！】に更新しました -->
-    <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[100] bg-blue-800 text-white px-5 py-3 md:px-6 md:py-4 rounded-full font-bold shadow-2xl flex items-center gap-2 md:gap-3 hover:bg-blue-700 transition-all transform hover:scale-105 animate-pulse-shadow border-2 border-white/20">
-        <i data-lucide="edit-3" class="w-5 h-5"></i>
+    <!-- 残り8席となり、緊急度を出すために赤色に変更し、アイコンに動きをつけました -->
+    <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[100] bg-gradient-to-r from-red-600 to-red-500 text-white px-5 py-3 md:px-7 md:py-4 rounded-full font-bold shadow-2xl flex items-center gap-2 md:gap-3 hover:from-red-700 hover:to-red-600 transition-all transform hover:scale-105 animate-pulse-shadow border-2 border-white/30 group">
+        <div class="relative">
+            <i data-lucide="mouse-pointer-2" class="w-6 h-6 animate-bounce"></i>
+        </div>
         <div class="text-left leading-tight">
-            <span class="text-[10px] md:text-xs block text-yellow-300 font-extrabold">2/11開催【残り9席！】</span>
-            <span class="text-xs md:text-sm">今すぐ申し込む</span>
+            <span class="text-[10px] md:text-xs block text-yellow-200 font-black tracking-wider">残りわずか【あと8席】</span>
+            <span class="text-sm md:text-base font-bold group-hover:underline">今すぐ席を確保する</span>
         </div>
     </a>
 
@@ -202,17 +211,21 @@
                 <h3 class="text-3xl font-serif font-bold mt-2">塾長ブログ <span class="text-sm font-normal align-middle bg-white text-green-700 border border-green-700 px-2 py-1 rounded ml-2">毎日更新中！</span></h3>
                 <div class="w-12 h-1 bg-green-700 mx-auto mt-4"></div>
             </div>
-            <!-- 記事表示エリア -->
-            <div id="blog-posts" class="grid md:grid-cols-3 gap-6 fade-up min-h-[200px]">
-                <div class="col-span-3 text-center text-gray-500 py-10">
-                    <div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-green-700"></div>
-                    <p class="mt-2 text-sm">最新記事を読み込んでいます...</p>
+            
+            <div class="fade-up bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100 max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2 w-full">
+                    <img src="founder-image.jpg" alt="塾長ブログ" class="w-full h-64 object-cover rounded-xl shadow-md">
                 </div>
-            </div>
-            <div class="text-center mt-10 fade-up">
-                <a href="https://ameblo.jp/testosteron-iron77/" target="_blank" class="inline-flex items-center gap-2 text-green-800 hover:text-green-600 font-bold transition border-b border-green-800 pb-1">
-                    アメブロで全ての記事を見る <i data-lucide="external-link" class="w-4 h-4"></i>
-                </a>
+                <div class="md:w-1/2 w-full text-left">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">日々の気づきや最新情報を発信中</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        トレーニングの理論から、日々の指導での気づき、ワークショップの裏話まで。
+                        塾長 内田真弘が毎日更新している公式ブログです。
+                    </p>
+                    <a href="https://ameblo.jp/testosteron-iron77/" target="_blank" class="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-4 rounded-full font-bold hover:bg-green-700 transition shadow-lg w-full md:w-auto justify-center">
+                        <i data-lucide="book-open" class="w-5 h-5"></i> アメブロを読む
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -253,6 +266,11 @@
                         プロ・アマ問わず、競技パフォーマンスの向上や怪我からの復帰（リコンディショニング）をサポートします。
                     </p>
                 </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="about.html" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition border-b border-blue-400 pb-1">
+                    心体義塾の理論と哲学について詳しく見る <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -364,37 +382,6 @@
                     target.scrollIntoView({ behavior: 'smooth' });
                     document.getElementById('mobile-menu').classList.add('hidden');
                 }
-            });
-        });
-
-        // アメブロRSS取得処理
-        document.addEventListener('DOMContentLoaded', function() {
-            const rssUrl = 'http://rssblog.ameba.jp/testosteron-iron77/rss2.xml';
-            const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rssUrl);
-            const defaultImg = 'founder-image.jpg';
-            fetch(apiUrl).then(res => res.json()).then(data => {
-                if (data.status === 'ok') {
-                    const container = document.getElementById('blog-posts');
-                    container.innerHTML = '';
-                    data.items.slice(0, 3).forEach(item => {
-                        let imgUrl = defaultImg;
-                        const imgMatch = item.description.match(/<img[^>]+src="([^">]+)"/);
-                        if (imgMatch) imgUrl = imgMatch[1];
-                        container.innerHTML += `
-                            <a href="${item.link}" target="_blank" class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all overflow-hidden border border-gray-100 flex flex-col h-full text-left">
-                                <div class="h-40 overflow-hidden bg-gray-200">
-                                    <img src="${imgUrl}" class="w-full h-full object-cover" onerror="this.src='${defaultImg}'">
-                                </div>
-                                <div class="p-4 flex-grow">
-                                    <h4 class="font-bold text-gray-800 text-sm line-clamp-2">${item.title}</h4>
-                                    <div class="mt-4 text-xs text-green-700 font-bold">続きを読む →</div>
-                                </div>
-                            </a>`;
-                    });
-                    lucide.createIcons();
-                }
-            }).catch(e => {
-                document.getElementById('blog-posts').innerHTML = `<div class="col-span-3 text-center py-8"><p class="text-gray-500 mb-4">現在、最新記事の自動取得が一時的に利用できません。<br>以下のボタンからアメブロをご覧ください。</p><a href="https://ameblo.jp/testosteron-iron77/" target="_blank" class="inline-block bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition shadow-md">アメブロを直接見る</a></div>`;
             });
         });
     </script>
