@@ -40,7 +40,7 @@
         .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
         
-        /* フローティングボタンのアニメーション（緊急色：赤に変更） */
+        /* フローティングボタンのアニメーション（緊急色：赤） */
         @keyframes pulse-shadow {
             0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
             70% { box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
@@ -85,13 +85,13 @@
     </header>
 
     <!-- フローティング申し込みボタン（追従ボタン） -->
-    <!-- 残り8席となり、緊急度を出すために赤色に変更し、アイコンに動きをつけました -->
+    <!-- 残り7席に更新し、赤色・バウンドアニメーションを追加 -->
     <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[100] bg-gradient-to-r from-red-600 to-red-500 text-white px-5 py-3 md:px-7 md:py-4 rounded-full font-bold shadow-2xl flex items-center gap-2 md:gap-3 hover:from-red-700 hover:to-red-600 transition-all transform hover:scale-105 animate-pulse-shadow border-2 border-white/30 group">
         <div class="relative">
             <i data-lucide="mouse-pointer-2" class="w-6 h-6 animate-bounce"></i>
         </div>
         <div class="text-left leading-tight">
-            <span class="text-[10px] md:text-xs block text-yellow-200 font-black tracking-wider">残りわずか【あと8席】</span>
+            <span class="text-[10px] md:text-xs block text-yellow-200 font-black tracking-wider">残りわずか【あと7席】</span>
             <span class="text-sm md:text-base font-bold group-hover:underline">今すぐ席を確保する</span>
         </div>
     </a>
@@ -203,7 +203,7 @@
         </div>
     </section>
 
-    <!-- 塾長ブログ（自動表示） -->
+    <!-- 塾長ブログ（静的リンク版） -->
     <section id="blog" class="py-20 bg-green-50 border-t border-b border-gray-200">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="text-center mb-12 fade-up">
