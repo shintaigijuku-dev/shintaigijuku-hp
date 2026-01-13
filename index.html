@@ -40,14 +40,14 @@
         .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
         
-        /* フローティングボタンのアニメーション（緊急色：赤） */
-        @keyframes pulse-shadow {
-            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        /* フローティングボタンのアニメーション（より強く脈打つ緊急アラート） */
+        @keyframes strong-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.8); transform: scale(1); }
+            50% { box-shadow: 0 0 0 20px rgba(220, 38, 38, 0); transform: scale(1.02); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); transform: scale(1); }
         }
-        .animate-pulse-shadow {
-            animation: pulse-shadow 2s infinite;
+        .animate-strong-pulse {
+            animation: strong-pulse 1.5s infinite;
         }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
@@ -85,14 +85,14 @@
     </header>
 
     <!-- フローティング申し込みボタン（追従ボタン） -->
-    <!-- 残り7席に更新し、赤色・バウンドアニメーションを追加 -->
-    <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[100] bg-gradient-to-r from-red-600 to-red-500 text-white px-5 py-3 md:px-7 md:py-4 rounded-full font-bold shadow-2xl flex items-center gap-2 md:gap-3 hover:from-red-700 hover:to-red-600 transition-all transform hover:scale-105 animate-pulse-shadow border-2 border-white/30 group">
+    <!-- 残り5席に更新し、グラデーションとアニメーションを強化 -->
+    <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[100] bg-gradient-to-r from-red-700 via-red-600 to-orange-500 text-white px-6 py-4 md:px-8 md:py-5 rounded-full font-bold shadow-2xl flex items-center gap-3 hover:scale-105 transition-all animate-strong-pulse border-2 border-yellow-300 group">
         <div class="relative">
-            <i data-lucide="mouse-pointer-2" class="w-6 h-6 animate-bounce"></i>
+            <i data-lucide="mouse-pointer-2" class="w-6 h-6 md:w-8 md:h-8 animate-bounce text-yellow-300"></i>
         </div>
         <div class="text-left leading-tight">
-            <span class="text-[10px] md:text-xs block text-yellow-200 font-black tracking-wider">残りわずか【あと7席】</span>
-            <span class="text-sm md:text-base font-bold group-hover:underline">今すぐ席を確保する</span>
+            <span class="text-xs md:text-sm block text-yellow-300 font-black tracking-wider drop-shadow-md">緊急【残り5席】</span>
+            <span class="text-sm md:text-lg font-bold group-hover:underline drop-shadow-sm">満席になる前に申し込む</span>
         </div>
     </a>
 
