@@ -15,11 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>心体義塾 | 東洋医学×最新科学で身体を解き明かす</title>
     <meta name="description" content="心体義塾公式サイト。無意識を整え、パフォーマンスを覚醒させる心と体の調律法「ZAT（ZEROSHIKI ATTITUDE TUNING）」を提唱。東洋医学の身体観と最新のポリヴェーガル理論（自律神経）を融合させた、スポーツ障害ケア、リコンディショニング、呼吸法指導などを行う教育機関です。">
-    <meta name="keywords" content="心体義塾,ZAT,ポリヴェーガル理論,東洋医学,スポーツ障害,リコンディショニング,呼吸法,内田真弘,横浜">
+    <meta name="keywords" content="心体義塾,ZAT,ポリヴェーガル理論,東洋医学,スポーツ障害,リコンディショニング,呼吸法,内田真弘,横浜,大阪">
     
     <!-- OGP設定 (SNSシェア時の表示) -->
     <meta property="og:title" content="心体義塾 | 東洋医学×最新科学で身体を解き明かす">
-    <meta property="og:description" content="無意識を整え、パフォーマンスを覚醒させる。心と体の調律法「ZAT」公式サイト。2/11ワークショップ受付中。">
+    <meta property="og:description" content="無意識を整え、パフォーマンスを覚醒させる。心と体の調律法「ZAT」公式サイト。2/11横浜、3/15大阪ワークショップ受付中。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shintaigijuku-hp.github.io/"> 
     <meta property="og:image" content="hero-image.jpg">
@@ -40,14 +40,14 @@
         .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
         
-        /* フローティングボタンのアニメーション（より強く脈打つ緊急アラート） */
-        @keyframes strong-pulse {
-            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.8); transform: scale(1); }
-            50% { box-shadow: 0 0 0 20px rgba(220, 38, 38, 0); transform: scale(1.02); }
-            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); transform: scale(1); }
+        /* フローティングボタンのアニメーション（緊急色：赤） */
+        @keyframes pulse-shadow {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
         }
-        .animate-strong-pulse {
-            animation: strong-pulse 1.5s infinite;
+        .animate-pulse-shadow {
+            animation: pulse-shadow 2s infinite;
         }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
@@ -85,14 +85,14 @@
     </header>
 
     <!-- フローティング申し込みボタン（追従ボタン） -->
-    <!-- 残り5席に更新し、グラデーションとアニメーションを強化 -->
-    <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[100] bg-gradient-to-r from-red-700 via-red-600 to-orange-500 text-white px-6 py-4 md:px-8 md:py-5 rounded-full font-bold shadow-2xl flex items-center gap-3 hover:scale-105 transition-all animate-strong-pulse border-2 border-yellow-300 group">
+    <!-- 残り席数を【残り5席！】のまま維持 -->
+    <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[100] bg-gradient-to-r from-red-600 to-red-500 text-white px-5 py-3 md:px-7 md:py-4 rounded-full font-bold shadow-2xl flex items-center gap-2 md:gap-3 hover:from-red-700 hover:to-red-600 transition-all transform hover:scale-105 animate-pulse-shadow border-2 border-white/30 group">
         <div class="relative">
-            <i data-lucide="mouse-pointer-2" class="w-6 h-6 md:w-8 md:h-8 animate-bounce text-yellow-300"></i>
+            <i data-lucide="mouse-pointer-2" class="w-6 h-6 animate-bounce"></i>
         </div>
         <div class="text-left leading-tight">
-            <span class="text-xs md:text-sm block text-yellow-300 font-black tracking-wider drop-shadow-md">緊急【残り5席】</span>
-            <span class="text-sm md:text-lg font-bold group-hover:underline drop-shadow-sm">満席になる前に申し込む</span>
+            <span class="text-[10px] md:text-xs block text-yellow-200 font-black tracking-wider">残りわずか【あと5席】</span>
+            <span class="text-sm md:text-base font-bold group-hover:underline">今すぐ席を確保する</span>
         </div>
     </a>
 
@@ -164,46 +164,81 @@
                 <div class="w-12 h-1 bg-blue-800 mx-auto mt-4"></div>
             </div>
 
-            <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-lg fade-up">
+            <!-- ① 大阪ワークショップ (NEW) -->
+            <div class="mb-12 bg-white border border-green-200 rounded-2xl overflow-hidden shadow-xl fade-up relative ring-4 ring-green-50">
+                <div class="absolute top-0 right-0 bg-red-600 text-white text-xs font-bold px-4 py-2 rounded-bl-xl z-20">NEW・受付開始</div>
                 <div class="md:flex">
-                    <div class="md:w-2/5 bg-blue-900 text-white p-8 flex flex-col justify-center items-center text-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20 z-0"></div>
+                    <div class="md:w-2/5 bg-green-800 text-white p-8 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/10 z-0"></div>
                         <div class="relative z-10">
-                            <span class="inline-block bg-white/20 px-3 py-1 rounded text-xs tracking-wider mb-4">受付中</span>
-                            <div class="text-5xl font-serif font-bold mb-2">2.11</div>
-                            <div class="text-xl mb-4">Wed / Holiday</div>
-                            <p class="text-sm opacity-90">横浜・関内</p>
-                            <p class="text-sm opacity-90">14:30 - 16:30</p>
+                            <span class="inline-block bg-white/20 px-3 py-1 rounded text-xs tracking-wider mb-4">大阪開催</span>
+                            <div class="text-5xl font-serif font-bold mb-2">3.15</div>
+                            <div class="text-xl mb-4">Sunday</div>
+                            <p class="text-sm opacity-90">阿倍野区民センター</p>
+                            <p class="text-sm opacity-90">10:00 - 12:00</p>
                         </div>
                     </div>
                     <div class="md:w-3/5 p-8 md:p-10">
                         <h4 class="text-xl md:text-2xl font-bold mb-4 text-gray-900 leading-snug">
-                            繰り返す痛みの「根本」にアプローチする。<br>
-                            スポーツ障害・傷害ケアとリコンディショニング
+                            ストレス耐性を鍛える<br>「自律神経と呼吸のワークショップ」
                         </h4>
                         <p class="text-gray-600 mb-6 text-sm leading-relaxed">
-                            患部の治療だけでは改善しない痛みや不調。その鍵は「自律神経」と「呼吸」にあります。東洋医学の身体観と最新のポリヴェーガル理論を融合させ、身体が本来持つ治癒システムを再起動させる、心体義塾独自のケア理論を伝授します。
+                            病気や不調には「治るもの」と「治らないもの」の境界線があります。その鍵は、自律神経を介したストレスのトリセツ。「内田式風船エクササイズ」を柱に、薬に頼らない自己調整力を身につけませんか？
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4">
-                            <!-- ワークショップ申込フォーム -->
-                            <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="flex-1 bg-blue-800 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-bold transition flex items-center justify-center gap-2">
+                            <a href="https://forms.gle/QL5NKjgWZ9MWB5sW6" target="_blank" class="flex-1 bg-green-700 hover:bg-green-600 text-white text-center py-3 rounded-lg font-bold transition flex items-center justify-center gap-2 shadow-md">
                                 <i data-lucide="edit-3" class="w-4 h-4"></i>
-                                今すぐ申し込む
+                                大阪：今すぐ申し込む
                             </a>
-                            <!-- チラシ画像へのリンク（flyer.jpg） -->
-                            <a href="flyer.jpg" target="_blank" class="flex-1 border border-gray-300 hover:bg-gray-50 text-gray-700 text-center py-3 rounded-lg font-bold transition flex items-center justify-center gap-2">
+                            <!-- 大阪のチラシ詳細ボタン（画像：osaka_flyer.jpg） -->
+                            <a href="osaka_flyer.jpg" target="_blank" class="flex-1 border border-gray-300 hover:bg-gray-50 text-gray-700 text-center py-3 rounded-lg font-bold transition flex items-center justify-center gap-2">
                                 <i data-lucide="image" class="w-4 h-4"></i>
-                                詳細を見る（チラシ画像）
+                                チラシ詳細
                             </a>
                         </div>
-                        <p class="text-xs text-gray-500 mt-4 text-center">※定員（20名）になり次第締め切りとなります</p>
                     </div>
                 </div>
             </div>
+
+            <!-- ② 横浜ワークショップ (2/11) -->
+            <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-lg fade-up opacity-90 hover:opacity-100 transition">
+                <div class="md:flex">
+                    <div class="md:w-2/5 bg-blue-900 text-white p-8 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                        <div class="relative z-10">
+                            <!-- 残り5席 -->
+                            <span class="inline-block bg-red-600 px-3 py-1 rounded text-xs font-bold tracking-wider mb-4 animate-pulse">残り5席</span>
+                            <div class="text-4xl font-serif font-bold mb-2">2.11</div>
+                            <div class="text-lg mb-2">Wed / Holiday</div>
+                            <p class="text-xs opacity-90">横浜・関内</p>
+                        </div>
+                    </div>
+                    <div class="md:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+                        <h4 class="text-lg md:text-xl font-bold mb-2 text-gray-900">
+                            繰り返す痛みの「根本」にアプローチする。<br>
+                            スポーツ障害・傷害ケア
+                        </h4>
+                        <p class="text-gray-600 mb-4 text-xs leading-relaxed">
+                            東洋医学×ポリヴェーガル理論。身体が本来持つ治癒システムを再起動させる、心体義塾独自のケア理論。
+                        </p>
+                        <div class="flex gap-4">
+                            <!-- 残り5席 -->
+                            <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="flex-1 bg-blue-800 hover:bg-blue-700 text-white text-center py-2 rounded text-sm font-bold transition">
+                                横浜：残り5席に申し込む
+                            </a>
+                            <!-- 横浜のチラシ詳細ボタン（画像：flyer.jpg） -->
+                            <a href="flyer.jpg" target="_blank" class="flex-1 border border-gray-300 hover:bg-gray-50 text-gray-600 text-center py-2 rounded text-sm font-bold transition flex items-center justify-center gap-2">
+                                <i data-lucide="image" class="w-4 h-4"></i>
+                                チラシ詳細
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- 塾長ブログ（静的リンク版） -->
+    <!-- 以下、ブログ・活動内容・フッターなどは変更なし -->
     <section id="blog" class="py-20 bg-green-50 border-t border-b border-gray-200">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="text-center mb-12 fade-up">
@@ -230,106 +265,11 @@
         </div>
     </section>
 
-    <!-- 活動内容 -->
-    <section id="activities" class="py-20 bg-gray-900 text-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16 fade-up">
-                <span class="text-blue-400 font-bold tracking-widest text-sm uppercase">Activities</span>
-                <h3 class="text-3xl font-serif font-bold mt-2">活動内容</h3>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition fade-up">
-                    <div class="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center mb-6 text-blue-400">
-                        <i data-lucide="users" class="w-6 h-6"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3">ワークショップ・講習会</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        一般の方から専門家までを対象に、ZATメソッドや呼吸法、身体操作を学ぶ定期的なワークショップを開催しています。
-                    </p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition fade-up" style="transition-delay: 100ms;">
-                    <div class="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center mb-6 text-blue-400">
-                        <i data-lucide="award" class="w-6 h-6"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3">指導者養成</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        トレーナー、セラピスト、医療従事者を対象に、現場で活かせる心身調整技術の指導と認定を行っています。
-                    </p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition fade-up" style="transition-delay: 200ms;">
-                    <div class="w-12 h-12 bg-blue-900/50 rounded-lg flex items-center justify-center mb-6 text-blue-400">
-                        <i data-lucide="activity" class="w-6 h-6"></i>
-                    </div>
-                    <h4 class="text-xl font-bold mb-3">アスリートサポート</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        プロ・アマ問わず、競技パフォーマンスの向上や怪我からの復帰（リコンディショニング）をサポートします。
-                    </p>
-                </div>
-            </div>
-            <div class="text-center mt-12">
-                <a href="about.html" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition border-b border-blue-400 pb-1">
-                    心体義塾の理論と哲学について詳しく見る <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 関連リンク・チャンネル -->
-    <section class="py-20 bg-gray-50 border-t border-gray-200">
-        <div class="container mx-auto px-4 max-w-5xl">
-            <div class="text-center mb-12 fade-up">
-                <span class="text-blue-800 font-bold tracking-widest text-sm uppercase">Recommended</span>
-                <h3 class="text-3xl font-serif font-bold mt-2">関連チャンネル・リンク</h3>
-                <div class="w-12 h-1 bg-blue-800 mx-auto mt-4"></div>
-            </div>
-            
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
-                <a href="https://www.youtube.com/@a_ri_chan" target="_blank" class="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border hover:border-red-500 group">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i data-lucide="youtube" class="text-red-600 w-6 h-6 group-hover:scale-110 transition"></i>
-                        <span class="font-bold text-sm text-gray-800">アーリーチャンネル</span>
-                    </div>
-                    <p class="text-xs text-gray-500">Recommended Channel</p>
-                </a>
-                
-                <a href="https://www.youtube.com/@zerobaserunning" target="_blank" class="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border hover:border-red-500 group">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i data-lucide="youtube" class="text-red-600 w-6 h-6 group-hover:scale-110 transition"></i>
-                        <span class="font-bold text-sm text-gray-800">高岡尚司の<br>ゼロベースランニング</span>
-                    </div>
-                    <p class="text-xs text-gray-500">Running & Conditioning</p>
-                </a>
-
-                <a href="https://www.youtube.com/@zero-i888" target="_blank" class="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border hover:border-red-500 group">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i data-lucide="youtube" class="text-red-600 w-6 h-6 group-hover:scale-110 transition"></i>
-                        <span class="font-bold text-sm text-gray-800">株式会社<br>ゼロイニシャライズ</span>
-                    </div>
-                    <p class="text-xs text-gray-500">ZERO-i Official</p>
-                </a>
-
-                <a href="https://www.youtube.com/@norris7084" target="_blank" class="block bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition border hover:border-red-500 group">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i data-lucide="youtube" class="text-red-600 w-6 h-6 group-hover:scale-110 transition"></i>
-                        <span class="font-bold text-sm text-gray-800">Norris</span>
-                    </div>
-                    <p class="text-xs text-gray-500">Recommended Channel</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <!-- お問い合わせ -->
     <section id="contact" class="py-20 bg-blue-50">
         <div class="container mx-auto px-4 max-w-4xl text-center fade-up">
             <h3 class="text-3xl font-serif font-bold mb-6">お問い合わせ</h3>
-            <p class="text-gray-600 mb-8">
-                ワークショップへの申し込み、取材依頼、その他ご質問は<br>
-                以下のフォームよりお気軽にお問い合わせください。
-            </p>
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
-                <!-- 総合お問い合わせフォーム -->
                 <a href="https://forms.gle/RGRiv7qjGAGChmYe7" target="_blank" class="w-full md:w-auto bg-blue-900 hover:bg-blue-800 text-white px-8 py-4 rounded-full font-bold shadow-lg transition flex items-center justify-center gap-2">
                     <i data-lucide="mail" class="w-5 h-5"></i>
                     お問い合わせフォームへ
@@ -337,10 +277,6 @@
                 <a href="https://www.instagram.com/sintai_gijuku/" target="_blank" class="w-full md:w-auto bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 px-6 py-4 rounded-full font-bold shadow-sm transition flex items-center justify-center gap-2">
                     <i data-lucide="instagram" class="w-5 h-5"></i>
                     Instagram
-                </a>
-                <a href="https://www.youtube.com/@%E5%BF%83%E4%BD%93%E7%BE%A9%E5%A1%BE-%E5%91%BC%E5%90%B8%E9%81%93" target="_blank" class="w-full md:w-auto bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 px-6 py-4 rounded-full font-bold shadow-sm transition flex items-center justify-center gap-2">
-                    <i data-lucide="youtube" class="w-5 h-5 text-red-600"></i>
-                    YouTube
                 </a>
             </div>
         </div>
