@@ -41,13 +41,13 @@
         .fade-up.visible { opacity: 1; transform: translateY(0); }
         
         /* フローティングボタンのアニメーション（緊急色：赤） */
-        @keyframes pulse-shadow {
-            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(220, 38, 38, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        @keyframes strong-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.8); transform: scale(1); }
+            50% { box-shadow: 0 0 0 20px rgba(220, 38, 38, 0); transform: scale(1.02); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); transform: scale(1); }
         }
-        .animate-pulse-shadow {
-            animation: pulse-shadow 2s infinite;
+        .animate-strong-pulse {
+            animation: strong-pulse 1.5s infinite;
         }
         .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
@@ -85,14 +85,14 @@
     </header>
 
     <!-- フローティング申し込みボタン（追従ボタン） -->
-    <!-- 残り席数を【残り5席！】のまま維持 -->
-    <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[100] bg-gradient-to-r from-red-600 to-red-500 text-white px-5 py-3 md:px-7 md:py-4 rounded-full font-bold shadow-2xl flex items-center gap-2 md:gap-3 hover:from-red-700 hover:to-red-600 transition-all transform hover:scale-105 animate-pulse-shadow border-2 border-white/30 group">
+    <!-- 残り4席に更新 -->
+    <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[100] bg-gradient-to-r from-red-700 via-red-600 to-orange-500 text-white px-6 py-4 md:px-8 md:py-5 rounded-full font-bold shadow-2xl flex items-center gap-3 hover:scale-105 transition-all animate-strong-pulse border-2 border-yellow-300 group">
         <div class="relative">
-            <i data-lucide="mouse-pointer-2" class="w-6 h-6 animate-bounce"></i>
+            <i data-lucide="mouse-pointer-2" class="w-6 h-6 md:w-8 md:h-8 animate-bounce text-yellow-300"></i>
         </div>
         <div class="text-left leading-tight">
-            <span class="text-[10px] md:text-xs block text-yellow-200 font-black tracking-wider">残りわずか【あと5席】</span>
-            <span class="text-sm md:text-base font-bold group-hover:underline">今すぐ席を確保する</span>
+            <span class="text-xs md:text-sm block text-yellow-300 font-black tracking-wider drop-shadow-md">2/11横浜 緊急【残り4席】</span>
+            <span class="text-sm md:text-lg font-bold group-hover:underline drop-shadow-sm">今すぐ申し込む</span>
         </div>
     </a>
 
@@ -142,7 +142,7 @@
                     <div class="relative bg-gray-800 rounded-2xl p-4 shadow-2xl border border-gray-700 group">
                         <!-- 動画リンク m1_JD_bKQnE -->
                         <a href="https://www.youtube.com/watch?v=m1_JD_bKQnE" target="_blank" class="block relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg bg-black">
-                            <img src="https://img.youtube.com/vi/m1_JD_bKQnE/hqdefault.jpg" alt="ZATRE Preview" class="absolute top-0 left-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-300">
+                            <img src="https://img.youtube.com/vi/m1_JD_bKQnE/maxresdefault.jpg" alt="ZATRE Preview" class="absolute top-0 left-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition duration-300">
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
                                     <i data-lucide="play" class="w-8 h-8 text-white fill-current ml-1"></i>
@@ -205,8 +205,8 @@
                 <div class="md:flex">
                     <div class="md:w-2/5 bg-blue-900 text-white p-8 flex flex-col justify-center items-center text-center relative overflow-hidden">
                         <div class="relative z-10">
-                            <!-- 残り5席 -->
-                            <span class="inline-block bg-red-600 px-3 py-1 rounded text-xs font-bold tracking-wider mb-4 animate-pulse">残り5席</span>
+                            <!-- 残り4席に更新 -->
+                            <span class="inline-block bg-red-600 px-3 py-1 rounded text-xs font-bold tracking-wider mb-4 animate-pulse">残り4席</span>
                             <div class="text-4xl font-serif font-bold mb-2">2.11</div>
                             <div class="text-lg mb-2">Wed / Holiday</div>
                             <p class="text-xs opacity-90">横浜・関内</p>
@@ -221,13 +221,11 @@
                             東洋医学×ポリヴェーガル理論。身体が本来持つ治癒システムを再起動させる、心体義塾独自のケア理論。
                         </p>
                         <div class="flex gap-4">
-                            <!-- 残り5席 -->
+                            <!-- 残り4席に更新 -->
                             <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="flex-1 bg-blue-800 hover:bg-blue-700 text-white text-center py-2 rounded text-sm font-bold transition">
-                                横浜：残り5席に申し込む
+                                横浜：残り4席に申し込む
                             </a>
-                            <!-- 横浜のチラシ詳細ボタン（画像：flyer.jpg） -->
-                            <a href="flyer.jpg" target="_blank" class="flex-1 border border-gray-300 hover:bg-gray-50 text-gray-600 text-center py-2 rounded text-sm font-bold transition flex items-center justify-center gap-2">
-                                <i data-lucide="image" class="w-4 h-4"></i>
+                            <a href="flyer.jpg" target="_blank" class="flex-1 border border-gray-300 text-center py-2 rounded text-sm font-bold text-gray-600 hover:bg-gray-50 transition">
                                 チラシ詳細
                             </a>
                         </div>
