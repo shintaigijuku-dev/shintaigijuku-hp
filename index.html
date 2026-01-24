@@ -40,9 +40,9 @@
         .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
         
-        /* フローティングボタンのアニメーション */
+        /* フローティングボタンのアニメーション（緊急色：赤） */
         @keyframes strong-pulse {
-            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.8); transform: scale(1); }
             50% { box-shadow: 0 0 0 20px rgba(220, 38, 38, 0); transform: scale(1.02); }
             100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); transform: scale(1); }
         }
@@ -85,14 +85,14 @@
     </header>
 
     <!-- フローティング申し込みボタン（追従ボタン） -->
-    <!-- 2/11横浜の残席情報を優先表示 -->
+    <!-- 残り3席、文言を「最終」に変更 -->
     <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[100] bg-gradient-to-r from-red-700 via-red-600 to-orange-500 text-white px-6 py-4 md:px-8 md:py-5 rounded-full font-bold shadow-2xl flex items-center gap-3 hover:scale-105 transition-all animate-strong-pulse border-2 border-yellow-300 group">
         <div class="relative">
             <i data-lucide="mouse-pointer-2" class="w-6 h-6 md:w-8 md:h-8 animate-bounce text-yellow-300"></i>
         </div>
         <div class="text-left leading-tight">
-            <span class="text-[10px] md:text-xs block text-yellow-200 font-black tracking-wider">2/11横浜 緊急【残り4席】</span>
-            <span class="text-sm md:text-lg font-bold group-hover:underline drop-shadow-sm">今すぐ申し込む</span>
+            <span class="text-[10px] md:text-xs block text-yellow-200 font-black tracking-wider drop-shadow-md">2/11横浜 最終【残り3席】</span>
+            <span class="text-sm md:text-lg font-bold group-hover:underline drop-shadow-sm">ラストチャンス！今すぐ確保</span>
         </div>
     </a>
 
@@ -190,7 +190,7 @@
                                 <i data-lucide="edit-3" class="w-4 h-4"></i>
                                 大阪：今すぐ申し込む
                             </a>
-                            <!-- 大阪のチラシ詳細ボタン -->
+                            <!-- 大阪のチラシ詳細ボタン（画像：osaka_flyer.jpg） -->
                             <a href="osaka_flyer.jpg" target="_blank" class="flex-1 border border-gray-300 hover:bg-gray-50 text-gray-700 text-center py-3 rounded-lg font-bold transition flex items-center justify-center gap-2">
                                 <i data-lucide="image" class="w-4 h-4"></i>
                                 チラシ詳細
@@ -229,8 +229,8 @@
                 <div class="md:flex">
                     <div class="md:w-2/5 bg-blue-900 text-white p-8 flex flex-col justify-center items-center text-center relative overflow-hidden">
                         <div class="relative z-10">
-                            <!-- 残り4席 -->
-                            <span class="inline-block bg-red-600 px-3 py-1 rounded text-xs font-bold tracking-wider mb-4 animate-pulse">残り4席</span>
+                            <!-- 残り3席に更新 -->
+                            <span class="inline-block bg-red-600 px-3 py-1 rounded text-xs font-bold tracking-wider mb-4 animate-pulse">残り3席</span>
                             <div class="text-4xl font-serif font-bold mb-2">2.11</div>
                             <div class="text-lg mb-2">Wed / Holiday</div>
                             <p class="text-xs opacity-90">横浜・関内</p>
@@ -245,9 +245,9 @@
                             東洋医学×ポリヴェーガル理論。身体が本来持つ治癒システムを再起動させる、心体義塾独自のケア理論。
                         </p>
                         <div class="flex gap-4">
-                            <!-- 残り4席 -->
+                            <!-- 残り3席に更新 -->
                             <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="flex-1 bg-blue-800 hover:bg-blue-700 text-white text-center py-2 rounded text-sm font-bold transition">
-                                横浜：残り4席に申し込む
+                                横浜：残り3席に申し込む
                             </a>
                             <a href="flyer.jpg" target="_blank" class="flex-1 border border-gray-300 text-center py-2 rounded text-sm font-bold text-gray-600 hover:bg-gray-50 transition">
                                 チラシ詳細
