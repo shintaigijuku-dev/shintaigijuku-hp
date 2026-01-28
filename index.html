@@ -42,7 +42,7 @@
         
         /* フローティングボタンのアニメーション（緊急色：赤） */
         @keyframes strong-pulse {
-            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.8); transform: scale(1); }
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
             50% { box-shadow: 0 0 0 20px rgba(220, 38, 38, 0); transform: scale(1.02); }
             100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); transform: scale(1); }
         }
@@ -85,14 +85,14 @@
     </header>
 
     <!-- フローティング申し込みボタン（追従ボタン） -->
-    <!-- 残り3席、文言を「最終」に変更 -->
+    <!-- 2/11横浜の残席2を優先表示 -->
     <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[100] bg-gradient-to-r from-red-700 via-red-600 to-orange-500 text-white px-6 py-4 md:px-8 md:py-5 rounded-full font-bold shadow-2xl flex items-center gap-3 hover:scale-105 transition-all animate-strong-pulse border-2 border-yellow-300 group">
         <div class="relative">
             <i data-lucide="mouse-pointer-2" class="w-6 h-6 md:w-8 md:h-8 animate-bounce text-yellow-300"></i>
         </div>
         <div class="text-left leading-tight">
-            <span class="text-[10px] md:text-xs block text-yellow-200 font-black tracking-wider drop-shadow-md">2/11横浜 最終【残り3席】</span>
-            <span class="text-sm md:text-lg font-bold group-hover:underline drop-shadow-sm">ラストチャンス！今すぐ確保</span>
+            <span class="text-[10px] md:text-xs block text-yellow-200 font-black tracking-wider drop-shadow-md">2/11横浜 最終【残り2席】</span>
+            <span class="text-sm md:text-lg font-bold group-hover:underline drop-shadow-sm">今すぐ席を確保する</span>
         </div>
     </a>
 
@@ -188,7 +188,7 @@
                         <div class="flex flex-col sm:flex-row gap-4">
                             <a href="https://forms.gle/QL5NKjgWZ9MWB5sW6" target="_blank" class="flex-1 bg-green-700 hover:bg-green-600 text-white text-center py-3 rounded-lg font-bold transition flex items-center justify-center gap-2 shadow-md">
                                 <i data-lucide="edit-3" class="w-4 h-4"></i>
-                                大阪：今すぐ申し込む
+                                大阪：残り6席に申し込む
                             </a>
                             <!-- 大阪のチラシ詳細ボタン（画像：osaka_flyer.jpg） -->
                             <a href="osaka_flyer.jpg" target="_blank" class="flex-1 border border-gray-300 hover:bg-gray-50 text-gray-700 text-center py-3 rounded-lg font-bold transition flex items-center justify-center gap-2">
@@ -200,7 +200,7 @@
                 </div>
             </div>
 
-            <!-- ★NEW: 大阪 個人セッション (3/14) -->
+            <!-- ② 【限定】大阪 個人セッション (3/14) -->
             <div class="mb-12 bg-yellow-50 border border-yellow-200 rounded-2xl overflow-hidden shadow-lg fade-up relative">
                 <div class="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
                     <div class="flex-shrink-0 text-center md:text-left bg-white p-4 rounded-xl border border-yellow-100 shadow-sm">
@@ -209,28 +209,29 @@
                         <div class="text-xs text-gray-600 mt-1">天王寺・ルリエ</div>
                     </div>
                     <div class="flex-grow text-center md:text-left">
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">呼吸整体・個人セッション【限定4枠】</h4>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">呼吸整体・個人セッション【残り2枠】</h4>
                         <p class="text-sm text-gray-600 leading-relaxed mb-0">
                             ワークショップ前日に、内田塾長の施術（呼吸整体）をマンツーマンで受けられる貴重な機会です。あなたの身体の課題を直接調整します。<br>
                             <span class="text-red-600 font-bold block mt-2 text-xs md:text-sm">※先着順・定員になり次第受付終了となります。</span>
                         </p>
                     </div>
                     <div class="flex-shrink-0 w-full md:w-auto">
+                        <!-- 個人セッションフォーム -->
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSc0zneVkDViRgQLUTviFs7X9om0YUjfSzX99IOHUOJFjgClpg/viewform" target="_blank" class="block w-full md:w-auto bg-yellow-600 hover:bg-yellow-500 text-white text-center px-8 py-4 rounded-lg font-bold transition shadow-md flex items-center justify-center gap-2">
                             <i data-lucide="calendar-check" class="w-5 h-5"></i>
-                            予約する (5,000円)
+                            予約する (残り2枠)
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- ② 横浜ワークショップ (2/11) -->
+            <!-- ③ 横浜ワークショップ (2/11) -->
             <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-lg fade-up opacity-90 hover:opacity-100 transition">
                 <div class="md:flex">
                     <div class="md:w-2/5 bg-blue-900 text-white p-8 flex flex-col justify-center items-center text-center relative overflow-hidden">
                         <div class="relative z-10">
-                            <!-- 残り3席に更新 -->
-                            <span class="inline-block bg-red-600 px-3 py-1 rounded text-xs font-bold tracking-wider mb-4 animate-pulse">残り3席</span>
+                            <!-- 残り2席 -->
+                            <span class="inline-block bg-red-600 px-3 py-1 rounded text-xs font-bold tracking-wider mb-4 animate-pulse">残り2席</span>
                             <div class="text-4xl font-serif font-bold mb-2">2.11</div>
                             <div class="text-lg mb-2">Wed / Holiday</div>
                             <p class="text-xs opacity-90">横浜・関内</p>
@@ -245,9 +246,9 @@
                             東洋医学×ポリヴェーガル理論。身体が本来持つ治癒システムを再起動させる、心体義塾独自のケア理論。
                         </p>
                         <div class="flex gap-4">
-                            <!-- 残り3席に更新 -->
+                            <!-- 残り2席に更新 -->
                             <a href="https://forms.gle/uUTp1z9dEKNsWinq8" target="_blank" class="flex-1 bg-blue-800 hover:bg-blue-700 text-white text-center py-2 rounded text-sm font-bold transition">
-                                横浜：残り3席に申し込む
+                                横浜：残り2席に申し込む
                             </a>
                             <a href="flyer.jpg" target="_blank" class="flex-1 border border-gray-300 text-center py-2 rounded text-sm font-bold text-gray-600 hover:bg-gray-50 transition">
                                 チラシ詳細
