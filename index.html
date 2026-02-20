@@ -15,14 +15,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>心体義塾 | 東洋医学×最新科学で身体を解き明かす</title>
     <meta name="description" content="心体義塾公式サイト。無意識を整え、パフォーマンスを覚醒させる心と体の調律法「ZAT（ZEROSHIKI ATTITUDE TUNING）」を提唱。東洋医学の身体観と最新のポリヴェーガル理論（自律神経）を融合させた、スポーツ障害ケア、リコンディショニング、呼吸法指導などを行う教育機関です。">
-    <meta name="keywords" content="心体義塾,ZAT,ポリヴェーガル理論,東洋医学,スポーツ障害,リコンディショニング,呼吸法,内田真弘,横浜,大阪">
     
     <!-- OGP設定 -->
     <meta property="og:title" content="心体義塾 | 東洋医学×最新科学で身体を解き明かす">
-    <meta property="og:description" content="無意識を整え、パフォーマンスを覚醒させる. 心と体の調律法「ZAT」公式サイト. 大阪会場キャンセル発生につき残1枠受付中。">
+    <meta property="og:description" content="無意識を整え、パフォーマンスを覚醒させる. 心と体の調律法「ZAT」公式サイト.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shintaigijuku-hp.github.io/"> 
-    <meta property="og:image" content="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1200">
+    <meta property="og:image" content="hero-image.jpg">
     <meta property="og:site_name" content="心体義塾">
     <meta property="og:locale" content="ja_JP">
 
@@ -33,21 +32,12 @@
         body { font-family: 'Noto Sans JP', sans-serif; }
         .font-serif { font-family: 'Shippori Mincho', serif; }
         .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1920');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('hero-image.jpg');
             background-size: cover;
             background-position: center;
         }
         .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
-        
-        .video-container { 
-            position: relative; 
-            padding-bottom: 56.25%; /* 16:9 ratio */
-            height: 0; 
-            overflow: hidden; 
-            max-width: 100%;
-            background: #000;
-        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased relative">
@@ -56,26 +46,26 @@
     <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
         <div class="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
             <h1 class="text-xl md:text-2xl font-serif font-bold tracking-widest text-gray-900">
-                <a href="#">心体義塾</a>
+                <a href="index.html">心体義塾</a>
             </h1>
             <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
-                <a href="#" class="text-sm font-medium hover:text-blue-700 transition">理論と哲学</a>
-                <a href="#" class="text-sm font-medium hover:text-blue-700 transition">認定院</a>
-                <a href="#" class="text-sm font-medium hover:text-blue-700 transition text-blue-800 font-bold">ZATRE</a>
+                <a href="about.html" class="text-sm font-medium hover:text-blue-700 transition">理論と哲学</a>
+                <a href="network.html" class="text-sm font-medium hover:text-blue-700 transition">認定院</a>
+                <a href="zatre.html" class="text-sm font-medium hover:text-blue-700 transition text-blue-800 font-bold">ZATRE</a>
                 <a href="#workshop" class="text-sm font-medium hover:text-blue-700 transition">ワークショップ</a>
                 <a href="https://ameblo.jp/testosteron-iron77/" target="_blank" class="text-sm font-medium hover:text-blue-700 transition">ブログ</a>
-                <a href="#contact" class="px-5 py-2 bg-blue-900 text-white text-sm rounded-full hover:bg-blue-800 transition">お問い合わせ</a>
+                <a href="#contact" class="px-5 py-2 bg-blue-900 text-white text-sm rounded-full hover:bg-blue-800 transition shadow-md">お問い合わせ</a>
             </nav>
             <button class="md:hidden text-gray-700 p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <a href="#" class="block px-4 py-3 hover:bg-gray-50">理論と哲学・塾長紹介</a>
-            <a href="#" class="block px-4 py-3 hover:bg-gray-50 border-t">認定院・トレーナー</a>
-            <a href="#" class="block px-4 py-3 hover:bg-gray-50 border-t text-blue-800 font-bold">ZATRE</a>
-            <a href="#workshop" class="block px-4 py-3 hover:bg-gray-50 border-t">最新ワークショップ</a>
-            <a href="#contact" class="block px-4 py-3 hover:bg-gray-50 border-t text-blue-900 font-bold">お問い合わせ</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-lg animate-in fade-in slide-in-from-top-4 duration-300">
+            <a href="about.html" class="block px-4 py-4 hover:bg-gray-50 border-b">理論と哲学・塾長紹介</a>
+            <a href="network.html" class="block px-4 py-4 hover:bg-gray-50 border-b">認定院・トレーナー</a>
+            <a href="zatre.html" class="block px-4 py-4 hover:bg-gray-50 border-b text-blue-800 font-bold">ZATRE</a>
+            <a href="#workshop" class="block px-4 py-4 hover:bg-gray-50 border-b">最新ワークショップ</a>
+            <a href="#contact" class="block px-4 py-4 bg-blue-50 text-blue-900 font-bold">お問い合わせ</a>
         </div>
     </header>
 
@@ -106,8 +96,8 @@
         </div>
     </section>
 
-    <!-- ZATRE セクション (表示エラー対策: サムネイルリンク方式) -->
-    <section class="py-20 bg-gray-900 text-white overflow-hidden border-b border-gray-800">
+    <!-- ZATRE セクション -->
+    <section class="py-24 bg-gray-900 text-white overflow-hidden border-b border-gray-800">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2 fade-up">
@@ -116,27 +106,21 @@
                     <p class="text-gray-400 mb-6 leading-relaxed text-sm">
                         YouTube企画「ZATRE（ザトレ）」では、動物本来の連動した動作を取り戻すワークアウトを公開。対面指導の枠が埋まっている間も、動画を通じてメソッドの核をご体験いただけます。
                     </p>
-                    <a href="https://www.youtube.com/@SintaiGijuku" target="_blank" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-bold border-b border-blue-400 pb-1 transition-colors">
-                        YouTubeチャンネルを見る <i data-lucide="external-link" class="w-4 h-4"></i>
+                    <a href="zatre.html" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-bold border-b border-blue-400 pb-1 transition-colors">
+                        ZATRE動画ライブラリへ <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
                 </div>
                 <div class="w-full md:w-1/2 fade-up relative">
-                    <!-- 装飾背景 -->
                     <div class="bg-blue-800/20 absolute -inset-4 rounded-2xl blur-xl"></div>
-                    <!-- 動画サムネイル (クリックでYouTubeへ) -->
                     <div class="relative bg-gray-800 rounded-2xl p-2 md:p-3 shadow-2xl border border-gray-700 group">
+                        <!-- YouTubeサムネイルリンク方式（Error 153 回避） -->
                         <a href="https://www.youtube.com/watch?v=JbMJLmC6SlI" target="_blank" class="block relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg bg-black">
-                            <!-- YouTubeの高画質サムネイル -->
                             <img src="https://img.youtube.com/vi/JbMJLmC6SlI/maxresdefault.jpg" alt="ZATRE 動画を再生" class="absolute top-0 left-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 transition duration-500">
-                            
-                            <!-- 再生ボタンオーバーレイ -->
                             <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="w-16 h-16 md:w-20 md:h-20 bg-red-600/90 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:bg-red-600 transition duration-300">
-                                    <i data-lucide="play" class="w-8 h-8 md:w-10 md:h-10 text-white fill-current ml-1"></i>
+                                <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition duration-300">
+                                    <i data-lucide="play" class="w-8 h-8 text-white fill-current ml-1"></i>
                                 </div>
                             </div>
-
-                            <!-- 下部ラベル -->
                             <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                                 <p class="text-white text-xs font-bold flex items-center gap-2">
                                     <i data-lucide="youtube" class="w-4 h-4 text-red-500"></i> YouTubeで再生する
@@ -144,7 +128,6 @@
                             </div>
                         </a>
                     </div>
-                    <p class="text-center text-gray-500 text-[10px] mt-4 tracking-widest uppercase">※タップするとYouTubeで動画が開きます</p>
                 </div>
             </div>
         </div>
@@ -166,42 +149,46 @@
                     <div class="md:w-1/3 bg-blue-50 text-blue-900 p-8 md:p-10 flex flex-col justify-center items-center text-center">
                         <div class="text-5xl font-serif font-bold mb-2">3.15</div>
                         <div class="text-xl tracking-widest">OSAKA</div>
-                        <p class="text-xs mt-2">阿倍野区民センター</p>
+                        <p class="text-[10px] mt-2 font-bold opacity-70">10:00 〜 12:00</p>
                     </div>
                     <div class="md:w-2/3 p-8 md:p-10 text-left flex flex-col justify-center">
-                        <h4 class="text-xl md:text-2xl font-bold mb-4 text-gray-900">自律神経と呼吸のワークショップ</h4>
+                        <h4 class="text-xl md:text-2xl font-bold mb-4 text-gray-900 leading-tight">ストレス耐性を鍛える 自律神経と呼吸のワークショップ</h4>
                         <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                            一度満員となりましたが、キャンセルにより【1名様分】の空きが出ました。先着順での受付となります。
+                            会場：大阪市立阿倍野区民センター 集会室1<br>
+                            内容：内田式風船エクササイズを柱に、呼吸と姿勢を整え「自己調整力」を高めます。キャンセルにつき先着順での受付となります。
                         </p>
-                        <a href="https://forms.gle/eUiF2GjvmRmnQSb49" target="_blank" class="inline-block bg-blue-900 text-white px-8 py-3 rounded-full text-sm font-bold hover:bg-blue-800 transition text-center">
-                            ワークショップを申し込む →
-                        </a>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://forms.gle/eUiF2GjvmRmnQSb49" target="_blank" class="inline-block bg-blue-900 text-white px-8 py-3 rounded-full text-sm font-bold hover:bg-blue-800 transition shadow-lg">
+                                ワークショップを申し込む
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 個人セッション -->
-            <div class="mb-12 bg-white border border-blue-100 rounded-2xl overflow-hidden shadow-md fade-up">
-                <div class="p-6 md:p-10 flex flex-col md:flex-row items-center gap-6 md:gap-8">
-                    <div class="flex-shrink-0 text-center md:text-left bg-blue-50 p-6 rounded-xl border border-blue-100 w-full md:w-auto">
-                        <div class="text-3xl font-serif font-bold text-blue-900">3.14 <span class="text-lg font-normal">Sat</span></div>
-                        <div class="text-[10px] text-blue-700 mt-1 uppercase tracking-widest font-bold">Registration Open</div>
+            <!-- 横浜ワークショップ（終了分として薄く表示） -->
+            <div class="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-none fade-up relative opacity-60 grayscale">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-gray-100 text-gray-400 p-8 flex flex-col justify-center items-center text-center">
+                        <div class="text-4xl font-serif font-bold mb-1">2.11</div>
+                        <div class="text-lg tracking-widest uppercase">Yokohama</div>
+                        <p class="text-[10px] mt-1 font-bold">CLOSED</p>
                     </div>
-                    <div class="flex-grow text-center md:text-left">
-                        <h4 class="text-lg font-bold text-gray-900 mb-2">呼吸整体・個人セッション</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                            塾長・内田真弘による個別アセスメントとパーソナルワークをマンツーマンで体験。
+                    <div class="md:w-2/3 p-8 text-left">
+                        <h4 class="text-xl font-bold text-gray-400 mb-2">横浜ワークショップ</h4>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            会場：ミズグチダンススクール<br>
+                            ご参加いただいた皆様、ありがとうございました. 次回開催までお待ちください.
                         </p>
-                        <a href="https://forms.gle/8MU27FjWWGkk3wuF6" target="_blank" class="inline-block bg-blue-900 text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-blue-800 transition">
-                            セッションを申し込む
-                        </a>
                     </div>
                 </div>
             </div>
-
-            <div class="mt-20 p-8 md:p-10 bg-blue-50 rounded-3xl border border-blue-100 fade-up text-center">
+            
+            <div class="mt-20 p-8 md:p-12 bg-blue-50 rounded-3xl border border-blue-100 fade-up text-center">
                 <h4 class="font-bold text-blue-900 mb-4 text-xl">最新情報はSNS・ブログでチェック</h4>
-                <p class="text-sm text-blue-800 mb-8 max-w-2xl mx-auto">心体義塾の理論に基づいた身体操作や自律神経の整え方を発信しています。</p>
+                <p class="text-sm text-blue-800 mb-8 max-w-2xl mx-auto leading-relaxed">
+                    内田式風船エクササイズをはじめとする独自のメソッド、最新のワークショップ情報を随時発信しています。
+                </p>
                 <div class="flex flex-wrap justify-center gap-4">
                     <a href="https://ameblo.jp/testosteron-iron77/" target="_blank" class="flex items-center gap-2 px-6 py-3 bg-white border border-blue-200 rounded-full text-sm font-bold text-blue-900 hover:bg-blue-100 transition shadow-sm">
                         <i data-lucide="edit-3" class="w-4 h-4 text-green-600"></i> 公式アメブロ
@@ -218,23 +205,26 @@
     </section>
 
     <!-- フッター -->
-    <footer id="contact" class="bg-gray-900 text-white py-16 md:py-20 px-4">
+    <footer id="contact" class="bg-gray-900 text-white py-16 md:py-24 px-4">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 text-sm">
             <div>
-                <h3 class="text-2xl font-serif font-bold mb-6 tracking-widest uppercase">Shintai Gijuku</h3>
-                <p class="text-gray-400 leading-relaxed">代表：内田 真弘</p>
-                <p class="text-gray-500 mt-4 text-xs">東洋医学の身体観と最新科学を融合させた独自の身体調律メソッド「ZAT」を提唱。</p>
+                <h3 class="text-2xl font-serif font-bold mb-8 tracking-widest uppercase">Shintai Gijuku</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    代表：内田 真弘
+                </p>
+                <p class="text-gray-500 mt-4 text-xs">東洋医学の身体観と最新の科学を融合させた教育機関</p>
             </div>
             <div>
-                <h4 class="font-bold mb-6 text-gray-300 tracking-widest uppercase">Links</h4>
+                <h4 class="font-bold mb-8 text-gray-300 tracking-widest uppercase">Navigation</h4>
                 <ul class="space-y-4">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">塾長紹介</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">認定院ネットワーク</a></li>
-                    <li><a href="https://forms.gle/RGRiv7qjGAGChmYe7" target="_blank" class="text-gray-400 hover:text-white transition">お問い合わせフォーム</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-white transition">理論と哲学・代表紹介</a></li>
+                    <li><a href="network.html" class="text-gray-400 hover:text-white transition">認定院ネットワーク</a></li>
+                    <li><a href="zatre.html" class="text-gray-400 hover:text-white transition">YouTube企画 ZATRE</a></li>
+                    <li><a href="https://forms.gle/RGRiv7qjGAGChmYe7" target="_blank" class="text-gray-400 hover:text-white transition font-bold text-blue-400">お問い合わせフォーム</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold mb-6 text-gray-300 tracking-widest uppercase">Connect</h4>
+                <h4 class="font-bold mb-8 text-gray-300 tracking-widest uppercase">Social Connect</h4>
                 <div class="flex gap-6">
                     <a href="https://www.instagram.com/sintai_gijuku/" target="_blank" class="text-gray-400 hover:text-white transition"><i data-lucide="instagram" class="w-6 h-6"></i></a>
                     <a href="https://www.youtube.com/@SintaiGijuku" target="_blank" class="text-gray-400 hover:text-white transition"><i data-lucide="youtube" class="w-6 h-6"></i></a>
@@ -249,30 +239,14 @@
 
     <script>
         lucide.createIcons();
-        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
-        }, { threshold: 0.05 });
-        
+        }, { threshold: 0.1 });
         document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-        // スムーススクロール
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                const target = document.querySelector(targetId);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                    document.getElementById('mobile-menu').classList.add('hidden');
-                }
-            });
-        });
     </script>
 </body>
 </html>
